@@ -16,6 +16,8 @@ import Games from "./components/pages/games";
 import Ebooks from "./components/pages/ebooks";
 import CaseStudies from "./components/pages/casestudies";
 import Navbar from "./components/Navbar/Navbar";
+import Preamble from "./components/pages/constitution/preamble";
+
 const App = () => {
   return (
     <Router>
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/games" element={<Games />} />
           <Route path="/ebooks" element={<Ebooks />} />
           <Route path="/casestudies" element={<CaseStudies />} />
+          <Route path="/constitution/preamble" element={<Preamble />} />
         </Routes>
 
         {/* Footer or other global sections can go here */}
