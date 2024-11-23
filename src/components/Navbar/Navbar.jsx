@@ -1,58 +1,57 @@
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import samvidhanPathLogo from "../../assets/samvidhanpath.png";
 
 const NavbarMenu = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "Services",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "About Us",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Our Team",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Contact Us",
-    link: "#",
-  },
+  { id: 1, title: "Home", path: "/" },
+  { id: 2, title: "Constitution of India", path: "/constitution" },
+  { id: 3, title: "Explore", path: "/explore" },
+  { id: 4, title: "Learn", path: "/learn" },
+  { id: 5, title: "For Citizen", path: "/citizen" },
+  { id: 6, title: "Engage", path: "/engage" },
+  { id: 7, title: "E-Books", path: "/ebooks" },
+  { id: 8, title: "Games", path: "/games" },
 ];
+
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleMenuClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <nav className="relative z-20">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="container py-10 flex justify-between items-center"
+        className="container flex items-center justify-between py-6"
       >
         {/* Logo section */}
-        <div>
-          <h1 className="font-bold text-2xl">The Coding Journey</h1>
+        
+        
+        <div className="flex flex-row gap-3">
+      
+          <img className="w-auto h-20" src={samvidhanPathLogo} alt="logo" />
+           <div className="flex flex-col justify-center items-left">
+          <h1 className="text-2xl font-bold">Samvidhan Path </h1>
+          <h1 className="text-2xl font-bold">संविधान पथ </h1>
+          </div>
         </div>
         {/* Menu section */}
         <div className="hidden lg:block">
           <ul className="flex items-center gap-3">
             {NavbarMenu.map((menu) => (
               <li key={menu.id}>
-                <a
-                  href={menu.path}
-                  className="inline-block py-2 px-3 hover:text-secondary relative group"
+                <button
+                  onClick={() => handleMenuClick(menu.path)}
+                  className="relative inline-block px-3 py-2 hover:text-secondary group"
                 >
-                  <div className="w-2 h-2 bg-secondary absolute mt-4 rounded-full left-1/2 -translate-x-1/2 top-1/2 bottom-0 group-hover:block hidden"></div>
+                  <div className="absolute bottom-0 hidden w-2 h-2 mt-4 -translate-x-1/2 rounded-full bg-secondary left-1/2 top-1/2 group-hover:block"></div>
                   {menu.title}
-                </a>
+                </button>
               </li>
             ))}
             <button className="primary-btn">Sign In</button>

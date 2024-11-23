@@ -1,9 +1,12 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
 import HeroPng from "../../assets/hero.png";
 import { animate, motion } from "framer-motion";
+import Banner from "../Banner/Banner";
+import Banner2 from "../Banner/Banner2";
+import Services from "../Services/Services";
+import Subscribe from "../Subscribe/Subscribe";
 
 export const FadeUp = (delay) => {
   return {
@@ -27,11 +30,11 @@ export const FadeUp = (delay) => {
 
 const Hero = () => {
   return (
-    <section className="bg-light overflow-hidden relative">
-      <Navbar />
+    <>
+    <section className="relative overflow-hidden bg-light">
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Brand Info */}
-        <div className="flex flex-col justify-center py-14 md:py-0 relative z-20">
+        <div className="relative z-20 flex flex-col justify-center py-14 md:py-0">
           <div className="text-center md:text-left space-y-10 lg:max-w-[400px]">
             <motion.h1
               variants={FadeUp(0.6)}
@@ -48,15 +51,15 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <button className="primary-btn flex items-center gap-2 group">
+              <button className="flex items-center gap-2 primary-btn group">
                 Get Started
-                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
+                <IoIosArrowRoundForward className="text-xl duration-300 group-hover:translate-x-2 group-hover:-rotate-45" />
               </button>
             </motion.div>
           </div>
         </div>
         {/* Hero Image */}
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <motion.img
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -76,6 +79,11 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    <Services />
+    <Banner />
+    <Subscribe />
+    <Banner2 />
+    </>
   );
 };
 
