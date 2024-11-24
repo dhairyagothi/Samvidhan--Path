@@ -20,6 +20,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Preamble from "./components/pages/constitution/preamble";
 import History from "./components/pages/constitution/history";
 import Rights from "./components/pages/Citizens/rights";
+import Duties from "./components/pages/Citizens/duties";
+import MarkdownViewer from "./components/MarkdownViewer";  
 
 const App = () => {
   return (
@@ -47,6 +49,9 @@ const App = () => {
           <Route path="/constitution/preamble" element={<Preamble />} />
           <Route path="/constitution/history" element={<History />} />
           <Route path="/citizen/rights" element={<Rights />} />
+          <Route path="/citizen/duties" element={<Duties />} />
+          <Route path="/docs/:fileName" element={<MarkdownViewer />} />
+
         </Routes>
 
         {/* Footer or other global sections can go here */}
