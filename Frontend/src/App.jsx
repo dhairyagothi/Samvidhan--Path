@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
@@ -50,6 +51,7 @@ const App = () => {
 
         {/* Footer or other global sections can go here */}
         <Footer />
+        <Analytics />
       </main>
     </Router>
   );
