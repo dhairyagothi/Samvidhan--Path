@@ -31,7 +31,7 @@ const NavbarMenu = [
       { id: 2, title: "Fundamental Duties", path: "/citizen/duties" },
       { id: 3, title: "Directive Principles", path: "/citizen/dpsp" },
       { id: 4, title: "Amendment", path: "/citizen/amendment" },
-      { id: 5, title: "Schedules", path: "/citizen/amendment" },
+      { id: 5, title: "Schedules", path: "/citizen/schedules" },
     ],
 
   },

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const timelineEvents = [
     {
@@ -94,16 +95,33 @@ const timelineEvents = [
       image: "https://via.placeholder.com/150?text=Amendments", // Replace with an actual image URL
     },
   ];
-
+ 
 const Timeline = () => {
+  const navigate = useNavigate();
+
+  const Homeclick = () => {
+    navigate("/");
+  }
+  const Constituteclick = () => {
+    navigate("/constitution");
+  }
   return (
+    <>
     <div className="px-6 py-12 bg-gray-100">
+      <div className="container flex flex-row gap-4 mx-auto mt-6">
+    <span
+          onClick={Homeclick}
+          className=""
+        ><h4 className="text-red-500 cursor-pointer">Home</h4></span>
+        <span> &gt; </span> <h4 className="text-red-500 cursor-pointer" onClick={Constituteclick}>Constitution</h4>
+        <span> &gt; </span> <h4>History</h4>
+     </div>  
       <h1 className="mb-12 text-3xl font-bold text-center">
         Journey of the Constitution of India
       </h1>
       <div className="relative max-w-4xl mx-auto">
         {/* Vertical Line */}
-        <div className="absolute w-1 h-full transform -translate-x-1/2 bg-yellow-500 left-1/2"></div>
+        <div className="absolute w-1 h-full transform -translate-x-1/2 bg-sky-500 left-1/2"></div>
 
         {/* Timeline Events */}
         {timelineEvents.map((event, index) => (
@@ -124,7 +142,7 @@ const Timeline = () => {
             >
               {/* Circle */}
               <div
-                className={`absolute top-4 w-8 h-8 bg-yellow-500 rounded-full ${
+                className={`absolute top-4 w-8 h-8 bg-sky-500 rounded-full ${
                   index % 2 === 0 ? "-left-4" : "-right-4"
                 }`}
               ></div>
@@ -142,13 +160,14 @@ const Timeline = () => {
 
               {/* Text Content */}
               <h3 className="text-xl font-semibold text-gray-800">{event.year}</h3>
-              <h4 className="mt-2 text-lg font-bold text-yellow-500">{event.title}</h4>
+              <h4 className="mt-2 text-lg font-bold text-sky-500">{event.title}</h4>
               <p className="mt-2 text-gray-600">{event.description}</p>
             </div>
           </motion.div>
         ))}
       </div>
     </div>
+    </>
   );
 };
 

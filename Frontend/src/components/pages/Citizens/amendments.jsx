@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useNavigate, Routes, Route } from "react-router-dom";
 import MarkdownViewer from "../../MarkdownViewer"; // Import your MarkdownViewer component
+import Citizen from "../citizen";
 
 const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
   return (
@@ -43,6 +44,9 @@ const AmendmentsTable = () => {
   const HomeClick = () => {
     navigate("/");
   };
+  const CitizenClick = () => {
+    navigate("/citizen");
+  };
 
   return (
     <div className="container mx-auto mt-6">
@@ -51,6 +55,8 @@ const AmendmentsTable = () => {
         <span onClick={HomeClick} className="text-red-500 cursor-pointer">
           Home
         </span>
+        <span>&gt;</span>
+        <h4 onClick={ CitizenClick } className="text-red-500 cursor-pointer">Citizen</h4>
         <span>&gt;</span>
         <h4>Amendments</h4>
       </div>

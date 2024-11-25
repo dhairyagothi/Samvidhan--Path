@@ -15,7 +15,7 @@ import Contact from "./components/pages/contact";
 import Engage from "./components/pages/engage";
 import Games from "./components/pages/games";
 import Ebooks from "./components/pages/ebooks";
-import CaseStudies from "./components/pages/casestudies";
+import CaseStudies from "./components/pages/Explore/casestudies";
 import Navbar from "./components/Navbar/Navbar";
 import Preamble from "./components/pages/constitution/preamble";
 import History from "./components/pages/constitution/history";

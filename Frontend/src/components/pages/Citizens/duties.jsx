@@ -115,7 +115,9 @@ const DutiesTable = () => {
   const HomeClick = () => {
     navigate("/");
   };
-
+  const CitizenClick = () => {
+    navigate("/citizen");
+  };
   return (
     <div className="container mx-auto mt-6">
       {/* Breadcrumb */}
@@ -123,6 +125,8 @@ const DutiesTable = () => {
         <span onClick={HomeClick} className="text-red-500 cursor-pointer">
           Home
         </span>
+        <span>&gt;</span>
+        <h4 onClick={ CitizenClick } className="text-red-500 cursor-pointer">Citizen</h4>
         <span>&gt;</span>
         <h4>Fundamental Duties </h4>
       </div>

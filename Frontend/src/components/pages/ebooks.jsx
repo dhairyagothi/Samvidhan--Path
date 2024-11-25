@@ -1,17 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
+import book1png from "../../assets/book1.png";
+import book2png from "../../assets/book2.png";
 
 const EBooks = () => {
   const books = [
     {
       title: "Introduction to the Constitution of India",
       author: "DD Basu",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image: book1png,
     },
     {
       title: "Outlines of Indian Legal and Constitutional History",
       author: "MP Jain",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image: book2png,
     },
     {
       title: "The Indian Constitution: Cornerstone of a Nation",
