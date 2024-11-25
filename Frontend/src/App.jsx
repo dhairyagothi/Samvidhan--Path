@@ -21,6 +21,9 @@ import Preamble from "./components/pages/constitution/preamble";
 import History from "./components/pages/constitution/history";
 import Rights from "./components/pages/Citizens/rights";
 import Duties from "./components/pages/Citizens/duties";
+import DPSP from "./components/pages/Citizens/dpsp";
+import Schedules from "./components/pages/Citizens/schedules";
+import Amendments from "./components/pages/Citizens/amendments";
 import MarkdownViewer from "./components/MarkdownViewer";  
 
 const App = () => {
@@ -50,6 +53,9 @@ const App = () => {
           <Route path="/constitution/history" element={<History />} />
           <Route path="/citizen/rights" element={<Rights />} />
           <Route path="/citizen/duties" element={<Duties />} />
+          <Route path="/citizen/dpsp" element={<DPSP />} />
+          <Route path="/citizen/schedules" element={<Schedules/>}/>
+          <Route path="/citizen/amendment" element={<Amendments/>}/>
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
 
         </Routes>

@@ -29,9 +29,9 @@ const NavbarMenu = [
     submenu: [
       { id: 1, title: "Fundamental Rights", path: "/citizen/rights" },
       { id: 2, title: "Fundamental Duties", path: "/citizen/duties" },
-      { id: 3, title: "Directive Principles", path: "/citizen/directiveprinciples" },
+      { id: 3, title: "Directive Principles", path: "/citizen/dpsp" },
       { id: 4, title: "Amendment", path: "/citizen/amendment" },
-      { id: 5, title: "Schedules", path: "/citizen/schedules" },
+      { id: 5, title: "Schedules", path: "/citizen/amendment" },
     ],
 
   },

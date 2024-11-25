@@ -329,8 +329,7 @@ const RightsTable = () => {
       
       <h1 className="mb-4 text-2xl font-bold">Fundamental Rights / मौलिक अधिकार</h1>
 
-        {/* Global Search */}
-          <GlobalFilter globalFilter={globalFilter} setGlobalFilter={setGlobalFilter} />
+    
       {/* Render Groups of Fundamental Rights */}
       {groupedData.map((group, groupIndex) => (
         <div key={groupIndex} className="mb-8">

@@ -9,7 +9,7 @@ const DutiesTable = () => {
     () => [
       
         {
-            heading: "Fundamental Duties (Article 51A)",
+            heading: "PART IVA Fundamental Duties (Article 51A)",
             articles: [
               {
                 article: "51A(a)",
