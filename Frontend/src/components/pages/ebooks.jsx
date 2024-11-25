@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import book1png from "../../assets/book1.png";
 import book2png from "../../assets/book2.png";
-
+import book3png from "../../assets/book3.png";
+import book4png from "../../assets/book4.png";
+import book5png from "../../assets/book5.png";
+import book6png from "../../assets/book6.png";
 const EBooks = () => {
   const books = [
     {
@@ -18,22 +21,22 @@ const EBooks = () => {
     {
       title: "The Indian Constitution: Cornerstone of a Nation",
       author: "Granville Austin",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image: book3png,
     },
     {
       title: "The Indian Constitution: A Case Study of Backward Classes",
       author: "Granville Austin",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image: book4png,
     },
     {
       title: "Bharat Ka Samvidhan (Hindi)",
       author: "HP Gupta",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image:book5png,
     },
     {
       title: "Fundamental Rights and Their Enforcement",
       author: "Uday Raj Rai",
-      image: "https://via.placeholder.com/150?text=Book+Cover",
+      image: book6png,
     },
   ];
 
@@ -51,7 +54,7 @@ const EBooks = () => {
             <img
               src={book.image}
               alt={book.title}
-              className="object-cover w-full h-48"
+              className="object-cover w-[150px] items-center mx-20 h-40"
             />
             <div className="p-4">
               <h2 className="text-xl font-bold text-gray-800">{book.title}</h2>
