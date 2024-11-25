@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <section>
-      <div className="container grid grid-cols-1 gap-8 space-y-6 py-14 md:py-24 md:grid-cols-2 md:space-y-0">
+      <div className="grid grid-cols-1 gap-8 space-y-6 py-14 md:py-24 md:grid-cols-2 md:space-y-0">
         {/* Banner Image */}
         <div className="flex items-center justify-center">
           <motion.img
@@ -23,7 +23,7 @@ const Banner = () => {
           />
         </div>
         {/* Banner Text */}
-        <div className="flex flex-col justify-center">
+        <div className="container flex flex-col justify-center">
           <div className="space-y-12 text-center md:text-left">
             <motion.h1
               initial={{ opacity: 0, scale: 0.5 }}
@@ -32,7 +32,7 @@ const Banner = () => {
               transition={{ duration: 0.5 }}
               className="text-3xl md:text-4xl font-bold !leading-snug"
             >
-              The World's Leading Online learning Platform
+              Learn, Respect, Uphold – The Constitution empowers YOU!
             </motion.h1>
             <div className="flex flex-col gap-6">
               <motion.div
