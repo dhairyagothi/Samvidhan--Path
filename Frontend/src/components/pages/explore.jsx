@@ -38,7 +38,7 @@ const Explore = () => {
   return (
     <section className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="px-8 py-16 text-white bg-indigo-600">
+      <div className="px-8 py-16 text-white bg-gradient-to-r from-green-500 to-teal-600">
         <div className="container mx-auto text-center">
           <h1 className="mb-6 text-4xl font-bold">Explore the Constitution</h1>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed">
@@ -66,7 +66,7 @@ const Explore = () => {
               </div>
               <a
                 href={topic.link}
-                className="flex items-center justify-end mt-6 font-semibold text-indigo-600 hover:underline"
+                className="flex items-center justify-end mt-6 font-semibold text-teal-600 hover:underline"
               >
                 Learn More <AiOutlineArrowRight className="ml-2" />
               </a>
