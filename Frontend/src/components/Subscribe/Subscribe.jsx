@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBell } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 import BgImage from "../../assets/bg.png";
 import { motion } from "framer-motion";
 
@@ -17,7 +17,7 @@ const Subscribe = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         style={bgStyle}
-        className="container py-24 md:py-48"
+        className=" py-24 md:py-48"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -27,18 +27,17 @@ const Subscribe = () => {
         >
           <div className="text-center space-y-4 lg:max-w-[430px] mx-auto">
             <h1 className="text-4xl font-bold !leading-snug">
-              450K+ Students are learning from us
+            Learn the Constitution, shape the future.
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae iusto minima
+            The Constitution is the backbone of our democracy, ensuring justice, equality, and freedom for all.
             </p>
             <a
               href=""
               className="primary-btn !mt-8 inline-flex items-center gap-4 group"
             >
-              Subscribe Now
-              <FaBell className="group-hover:animate-bounce group-hover:text-lg duration-200" />
+              Get Started Now 
+              <MdArrowOutward className="group-hover:animate-bounce group-hover:text-lg duration-200" />
             </a>
           </div>
         </motion.div>
