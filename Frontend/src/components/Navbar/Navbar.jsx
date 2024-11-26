@@ -20,7 +20,7 @@ const NavbarMenu = [
     title: "Explore",
     path: "/explore",
     submenu: [
-      { id: 1, title: "Case Studies", path: "/explore/casestudies" },
+      { id: 1, title: "Case Studies", path: "/casestudies" },
       { id: 2, title: "Quiz", path: "/explore/quiz" },
     ],
   },
