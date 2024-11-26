@@ -22,7 +22,7 @@ const Banner2 = () => {
               incidunt!
             </p>
             <a
-              href="https://chat.whatsapp.com/FQSKgJ5f1eIAhlyF5sVym0"
+              href=""
               className="primary-btn !mt-8"
             >
               Join Now
@@ -36,7 +36,7 @@ const Banner2 = () => {
             whileInView={{ opacity: 1, x: 0 }}
             src={BannerPng}
             alt=""
-            className="w-[350px] md:max-w-[450px] object-cover drop-shadow "
+            className="w-[350px] md:max-w-[450px] object-cover h-full"
           />
         </div>
       </div>
