@@ -74,6 +74,9 @@ const Navbar = () => {
     setActiveMenu(activeMenu === menuId ? null : menuId);
   };
 
+  const Signinclick = () => {
+    navigate("/signin");
+  };
   return (
     <nav className="relative z-20 shadow-md">
       <motion.div
@@ -136,7 +139,7 @@ const Navbar = () => {
                 </AnimatePresence>
               </li>
             ))}
-            <button className="primary-btn">Sign In</button>
+            <button className="primary-btn" onClick={Signinclick}>Sign In</button>
           </ul>
         </div>
         {/* Mobile Hamburger menu section */}
@@ -208,8 +211,8 @@ const Navbar = () => {
         </li>
       ))}
     </ul>
-    <button className="px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600">
-      Sign In
+    <button className="px-4 py-2 bg-yellow-500 rounded-md hover:bg-yellow-600" onClick={Signinclick}>
+       Sign In 
     </button>
   </motion.div>
 </div>
