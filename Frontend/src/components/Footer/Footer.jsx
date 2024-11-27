@@ -3,7 +3,7 @@ import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";  // Add react-router link for navigation
-
+import logo from "../../assets/samvidhanpath.png";  // Update the path to the logo image
 const Footer = () => {
   return (
     <footer className="py-28 bg-[#f7f7f7]">
@@ -12,12 +12,14 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="container"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-2">
           {/* first section */}
-          <div className="space-y-4 max-w-[300px]">
+         
+          <div className="space-y-4 max-w-[400px] flex flex-col">
             <h1 className="text-2xl font-bold">Samvidhan Path</h1>
+            <img src={logo} alt="logo" sizes="" srcset="" className="w-1/4 h-auto"/>
             <p className="text-dark2">
-              The Indian Constitution is the supreme law of India, outlining the framework of the nation's governance. It establishes the rights and duties of citizens and the principles on which the nation operates. Learn how it shapes the democracy we live in today.
+            Bringing the Constitution Closer to Every Citizen
             </p>
           </div>
           
@@ -37,6 +39,12 @@ const Footer = () => {
                   <li className="duration-200 cursor-pointer hover:text-secondary">
                     <Link to="/ebooks">E-books</Link>
                   </li>
+                  <li className="duration-200 cursor-pointer hover:text-secondary">
+                    <Link to="/games">Games</Link>
+                  </li>
+                  <li className="duration-200 cursor-pointer hover:text-secondary">
+                    <Link to="/engage">Engage</Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -55,6 +63,9 @@ const Footer = () => {
                   </li>
                   <li className="duration-200 cursor-pointer hover:text-secondary">
                     <Link to="/contact">Contact</Link>
+                  </li>
+                  <li className="duration-200 cursor-pointer hover:text-secondary">
+                    <Link to="/t&c">Terms And Conditions</Link>
                   </li>
                 </ul>
               </div>

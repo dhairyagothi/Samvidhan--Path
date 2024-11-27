@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md"; 
 import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 import { HiOutlineBookOpen } from "react-icons/hi";
-import { FaPodcast, FaRegNewspaper, FaVideo } from "react-icons/fa";
+import { FaPodcast,  FaVideo } from "react-icons/fa";
 
 const Engage = () => {
   const sections = [
@@ -96,7 +96,7 @@ const Engage = () => {
             <p className="mb-6 text-gray-600">{section.description}</p>
             <a
               href={section.link}
-              className="flex items-center gap-2 font-semibold text-sky-600 hover:text-sky-700 hover:animate-bounce"
+              className="flex items-center gap-2 font-semibold text-sky-600 hover:text-sky-700 animate-bounce"
             >
               Learn More <MdArrowOutward className="duration-200 group-hover:animate-bounce" />
             </a>
@@ -104,15 +104,6 @@ const Engage = () => {
         ))}
       </div>
 
-      {/* Floating Action Button (Optional) */}
-      <div className="fixed bottom-10 right-10">
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          className="p-4 text-white bg-yellow-500 rounded-full shadow-lg cursor-pointer"
-        >
-          <MdArrowOutward size={28} className="hover:animate-bounce" />
-        </motion.div>
-      </div>
     </section>
   );
 };

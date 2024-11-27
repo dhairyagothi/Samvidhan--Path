@@ -21,7 +21,7 @@ const exploreData = [
     id: 3,
     title: "Constitution Simplified",
     description: "Discover how constitution is divided , its importance and how it is structured.",
-    link: "/explore/schedules",
+    link: "/constitution",
     delay: 0.4,
   },
 
@@ -66,7 +66,7 @@ const Explore = () => {
               </div>
               <a
                 href={topic.link}
-                className="flex items-center justify-end mt-6 font-semibold text-teal-600 hover:underline"
+                className="flex items-center justify-end mt-6 font-semibold text-teal-600 hover:underline animate-bounce"
               >
                 Learn More <AiOutlineArrowRight className="ml-2" />
               </a>

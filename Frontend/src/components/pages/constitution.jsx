@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BsFillFileEarmarkPdfFill } from "react-icons/bs";
 import { HiOutlineBookOpen } from "react-icons/hi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import constitutionnpng from "../../assets/education.png";
 const sections = [
   {
@@ -84,9 +85,9 @@ const Constitution = () => {
               <p className="text-gray-600">{section.description}</p>
               <a
                 href={section.link}
-                className="inline-block mt-6 font-semibold underline text-sky-600 hover:text-sky-700"
+                className="flex items-center gap-2 mt-6 font-semibold hover:underline text-sky-600 hover:text-sky-700 hover: animate-bounce"  
               >
-                Learn More
+                Learn More <AiOutlineArrowRight className="ml-2" />
               </a>
             </motion.div>
           ))}

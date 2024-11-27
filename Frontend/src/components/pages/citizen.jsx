@@ -1,9 +1,9 @@
 import React from "react";
-import { RiComputerLine } from "react-icons/ri";
-import { CiMobile3 } from "react-icons/ci";
-import { TbWorldWww } from "react-icons/tb";
-import { IoMdHappy } from "react-icons/io";
-import { IoPulseOutline } from "react-icons/io5";
+import { MdPolicy } from "react-icons/md";
+import { RiExchangeFill } from "react-icons/ri";
+import { BsFillAwardFill } from "react-icons/bs";
+import { MdSchedule } from "react-icons/md";
+import { LiaBalanceScaleRightSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import citizenpng from "../../assets/citizens.png";
 const CitizenData = [
@@ -11,35 +11,35 @@ const CitizenData = [
     id: 1,
     title: "Fundamental Rights",
     link: "/citizen/rights",
-    icon: <TbWorldWww />,
+    icon: <LiaBalanceScaleRightSolid />,
     delay: 0.2,
   },
   {
     id: 2,
     title: "Fundamental Duties",
     link: "/citizen/duties",
-    icon: <CiMobile3 />,
+    icon: <BsFillAwardFill />,
     delay: 0.3,
   },
   {
     id: 3,
     title: "Directive Principle Of State Policies",
     link: "/citizen/dpsp",
-    icon: <RiComputerLine />,
+    icon: <MdPolicy />,
     delay: 0.4,
   },
   {
     id: 4,
     title: "Amendments",
     link: "/citizen/amendment",
-    icon: <IoMdHappy />,
+    icon: <RiExchangeFill />,
     delay: 0.5,
   },
   {
     id: 5,
     title: "Schedules",
     link: "/citizen/schedules",
-    icon: <IoPulseOutline />,
+    icon: <MdSchedule />,
     delay: 0.6,
   },
 ];

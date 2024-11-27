@@ -26,6 +26,7 @@ import Schedules from "./components/pages/Citizens/schedules";
 import Amendments from "./components/pages/Citizens/amendments";
 import MarkdownViewer from "./components/MarkdownViewer";  
 import Signin from "./components/signin";
+import terms from "./components/pages/terms";
 
 const App = () => {
   return (
@@ -57,6 +58,7 @@ const App = () => {
           <Route path="/citizen/dpsp" element={<DPSP />} />
           <Route path="/citizen/schedules" element={<Schedules/>}/>
           <Route path="/citizen/amendment" element={<Amendments/>}/>
+          <Route path="/t&C" element={<terms />} />
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
 
