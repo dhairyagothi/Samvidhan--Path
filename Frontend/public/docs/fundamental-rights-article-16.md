@@ -1,6 +1,6 @@
 # Article 16 of the Constitution of India
 
-Article 16 of the Constitution of India guarantees **equality of opportunity** in matters of public employment. It ensures that no citizen is discriminated against in government jobs.
+Article 16 of the Constitution of India guarantees **equality of opportunity** in matters of public employment. It ensures that no citizen is discriminated against in government jobs
 
 > "There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State."
 
