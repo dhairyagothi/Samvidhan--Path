@@ -26,7 +26,11 @@ import Schedules from "./components/pages/Citizens/schedules";
 import Amendments from "./components/pages/Citizens/amendments";
 import MarkdownViewer from "./components/MarkdownViewer";  
 import Signin from "./components/signin";
-import terms from "./components/pages/terms";
+import Terms from "./components/pages/terms";
+import BlogPage from "./components/pages/Engage/blog";
+import PodcastPage from "./components/pages/Engage/podcast";
+import VideoPage from "./components/pages/Engage/video";
+import DiscussionForum from "./components/pages/Engage/discussion";
 
 const App = () => {
   return (
@@ -58,7 +62,11 @@ const App = () => {
           <Route path="/citizen/dpsp" element={<DPSP />} />
           <Route path="/citizen/schedules" element={<Schedules/>}/>
           <Route path="/citizen/amendment" element={<Amendments/>}/>
-          <Route path="/t&C" element={<terms />} />
+          <Route path="/t&C" element={<Terms />} />
+          <Route path="/engage/discussionforum" element={<DiscussionForum />} />
+          <Route path="/engage/blog" element={<BlogPage />} />
+          <Route path="/engage/podcast" element={<PodcastPage />} />
+          <Route path="/engage/video" element={<VideoPage />} />
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
 
