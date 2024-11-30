@@ -31,6 +31,9 @@ import BlogPage from "./components/pages/Engage/blog";
 import PodcastPage from "./components/pages/Engage/podcast";
 import VideoPage from "./components/pages/Engage/video";
 import DiscussionForum from "./components/pages/Engage/discussion";
+import QuizHome from "./components/pages/Quiz/QuizHome";
+import QuizResult from "./components/pages/Quiz/QuizResult";
+import QuizStart from "./components/pages/Quiz/QuizStart";
 
 const App = () => {
   return (
@@ -69,6 +72,9 @@ const App = () => {
           <Route path="/engage/video" element={<VideoPage />} />
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/quiz" element={<QuizHome />} />
+        <Route path="/quiz/start" element={<QuizStart />} />
+        <Route path="/quiz/result" element={<QuizResult />} />
 
         </Routes>
 

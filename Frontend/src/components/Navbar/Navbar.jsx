@@ -21,7 +21,7 @@ const NavbarMenu = [
     path: "/explore",
     submenu: [
       { id: 1, title: "Case Studies", path: "/casestudies" },
-      { id: 2, title: "Quiz", path: "/explore/quiz" },
+      { id: 2, title: "Quiz", path: "/quiz" },
     ],
   },
   {
