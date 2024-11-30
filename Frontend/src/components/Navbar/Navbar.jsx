@@ -49,7 +49,9 @@ const NavbarMenu = [
     id: 7, title: "Games", path: "/games",
     submenu: [
       { id: 1, title: "Crossword", path: "/games/crossword" },
-      { id: 2, title: "Puzzle", path: "/games/puzzle" },
+      { id: 2, title: "Quiz", path: "/quiz" },
+      { id: 3, title: "Word Search", path: "/games/word-search" },
+      { id: 4, title: "Puzzle", path: "/games/puzzle" },
     ],
   },
 

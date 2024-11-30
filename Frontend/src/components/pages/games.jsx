@@ -16,8 +16,21 @@ const GamesPage = () => {
       title: "Quiz",
       description: "put your knowledge to the test with our interactive quiz on the Indian Constitution.",
       image: gameImage1,
-      link: "/games/quizes",
+      link: "/quiz",
     },
+    {
+      title: "Word Search",
+      description: "Find hidden words related to the Indian Constitution in this engaging word search game.",
+      image: gameImage1,
+      link: "/games/word-search",
+    },
+    {
+      title: "Puzzle",
+      description: "Solve puzzles and learn about the Indian Constitution in a fun and interactive way.",
+      image: gameImage1,
+      link: "/games/puzzle",
+    },
+    
    
   ];
 
