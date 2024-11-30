@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
 import Hero from "./components/Hero/Hero";
@@ -34,6 +34,21 @@ import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay for loading (e.g., API fetch or resources)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      // Remove preloader element from the DOM
+      const preloader = document.getElementById("preloader");
+      if (preloader) {
+        preloader.style.display = "none";
+      }
+    }, 2000); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup
+  }, []);
   return (
     <Router>
       <main className="overflow-x-hidden bg-white text-dark">

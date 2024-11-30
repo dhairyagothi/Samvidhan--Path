@@ -19,11 +19,35 @@
   <meta name="author" content="Legislative Department | India">
   <meta name='robots' content='max-image-preview:large' />
 
+
   <title>Samvidhan Path | Legislative Department | India</title>
+  <style>
+    /* Add inline styles for the preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #preloader img {
+      width: 100px; /* Adjust size as needed */
+    }
+  </style>
+
 </head>
 
 <body>
+  <div id="preloader">
+    <img src="./src/assets/open-book.gif" alt="Loading..." />
+  </div>
   <div id="root"></div>
+ 
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
