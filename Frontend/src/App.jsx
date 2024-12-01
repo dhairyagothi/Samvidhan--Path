@@ -32,6 +32,8 @@ import PodcastPage from "./components/pages/Engage/podcast";
 import VideoPage from "./components/pages/Engage/video";
 import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
+import Intro from "./components/pages/Games/Puzzle/Intro";
+import Game from "./components/pages/Games/Puzzle/Game";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -86,6 +88,8 @@ const App = () => {
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/quiz" element={<QuizComponent />} />
+          <Route path="/games/puzzle" element={<Intro />} />
+          <Route path="/games/puzzle/:level" element={<Game />} />
         </Routes>
 
         {/* Footer or other global sections can go here */}
