@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Banner2 from "./components/Banner/Banner2";
-import Footer from "./components/Footer/Footer";
 import Constitution from "./components/pages/constitution";
 import Explore from "./components/pages/explore";
 import Learn from "./components/pages/Learn";
@@ -16,7 +17,6 @@ import Engage from "./components/pages/engage";
 import Games from "./components/pages/games";
 import Ebooks from "./components/pages/ebooks";
 import CaseStudies from "./components/pages/Explore/casestudies";
-import Navbar from "./components/Navbar/Navbar";
 import Preamble from "./components/pages/constitution/preamble";
 import History from "./components/pages/constitution/history";
 import Rights from "./components/pages/Citizens/rights";
@@ -32,8 +32,8 @@ import PodcastPage from "./components/pages/Engage/podcast";
 import VideoPage from "./components/pages/Engage/video";
 import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
-import Intro from "./components/pages/Games/Puzzle/Intro";
-import Game from "./components/pages/Games/Puzzle/Game";
+import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
+import PuzzleGame from "./components/pages/Games/Puzzle/Game";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,22 +42,24 @@ const App = () => {
     // Simulate a delay for loading (e.g., API fetch or resources)
     const timer = setTimeout(() => {
       setIsLoading(false);
-      // Remove preloader element from the DOM
       const preloader = document.getElementById("preloader");
       if (preloader) {
         preloader.style.display = "none";
       }
-    }, 2000); // Adjust delay as needed
+    }, 2000);
 
-    return () => clearTimeout(timer); // Cleanup
+    return () => clearTimeout(timer); 
   }, []);
+
+  if (isLoading) {
+    return <div id="preloader">Loading...</div>;
+  }
+
   return (
     <Router>
       <main className="overflow-x-hidden bg-white text-dark">
-        {/* Navbar or any other persistent components can go here */}
         <Navbar />
         <Routes>
-          {/* Define the routes for the application */}
           <Route path="/" element={<Hero />} />
           <Route path="/services" element={<Services />} />
           <Route path="/banner" element={<Banner />} />
@@ -78,8 +80,8 @@ const App = () => {
           <Route path="/citizen/rights" element={<Rights />} />
           <Route path="/citizen/duties" element={<Duties />} />
           <Route path="/citizen/dpsp" element={<DPSP />} />
-          <Route path="/citizen/schedules" element={<Schedules/>}/>
-          <Route path="/citizen/amendment" element={<Amendments/>}/>
+          <Route path="/citizen/schedules" element={<Schedules />} />
+          <Route path="/citizen/amendment" element={<Amendments />} />
           <Route path="/t&C" element={<Terms />} />
           <Route path="/engage/discussionforum" element={<DiscussionForum />} />
           <Route path="/engage/blog" element={<BlogPage />} />
@@ -88,11 +90,9 @@ const App = () => {
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/quiz" element={<QuizComponent />} />
-          <Route path="/games/puzzle" element={<Intro />} />
-          <Route path="/games/puzzle/:level" element={<Game />} />
+          <Route path="/games/puzzle" element={<PuzzleIntro />} />
+          <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
         </Routes>
-
-        {/* Footer or other global sections can go here */}
         <Footer />
         <Analytics />
       </main>
