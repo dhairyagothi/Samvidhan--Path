@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import samvidhanPathLogo from "../../assets/samvidhanpath.png";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { MdAccessibility, MdOutlineLanguage } from "react-icons/md";
+import { FaHighlighter, FaTextHeight } from "react-icons/fa";
+import GoogleTranslate from "../Language";
 
 const NavbarMenu = [
   { id: 1, title: "Home", path: "/" },
@@ -80,11 +83,24 @@ const Navbar = () => {
     navigate("/signin");
   };
   return (
+    <>
+        <div className="border-b shadow-sm bg-yellow-50">
+      <div className="container flex items-center justify-between px-2 lg:px-5">
+        {/* Accessibility Icons */}
+        <div className="flex items-center space-x-4 text-gray-700">
+          <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
+          <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
+          <FaTextHeight size={24} className="cursor-pointer hover:text-black" title="Text Resize" />
+        </div>
+        {/* Google Translate */}
+        <GoogleTranslate />
+      </div>
+    </div>
     <nav className="relative z-20 shadow-md">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="container flex items-center justify-between py-10"
+        className="container flex items-center justify-between py-4 lg:py-6"
       >
         {/* Logo section */}
         <div className="flex flex-row gap-3">
@@ -221,6 +237,7 @@ const Navbar = () => {
 
       </motion.div>
     </nav>
+  </>
   );
 };
 

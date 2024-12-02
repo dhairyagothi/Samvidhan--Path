@@ -30,6 +30,7 @@ import Terms from "./components/pages/terms";
 import BlogPage from "./components/pages/Engage/blog";
 import PodcastPage from "./components/pages/Engage/podcast";
 import VideoPage from "./components/pages/Engage/video";
+import GoogleTranslate from "./components/Language";
 import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
 import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
@@ -51,9 +52,7 @@ const App = () => {
     return () => clearTimeout(timer); 
   }, []);
 
-  if (isLoading) {
-    return <div id="preloader">Loading...</div>;
-  }
+  
 
   return (
     <Router>
@@ -89,6 +88,7 @@ const App = () => {
           <Route path="/engage/video" element={<VideoPage />} />
           <Route path="/docs/:fileName" element={<MarkdownViewer />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/translate" element={<GoogleTranslate />} />
           <Route path="/quiz" element={<QuizComponent />} />
           <Route path="/games/puzzle" element={<PuzzleIntro />} />
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />

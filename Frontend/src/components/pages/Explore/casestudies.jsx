@@ -44,7 +44,7 @@ const Casestudies = () => {
       image: casestudy1png,
       intro: "This case is known for establishing the Basic Structure Doctrine, which limited the power of Parliament to amend the Constitution.",
       view: (
-        <a href="/docs/casestudy-article51A" className="hover:text-red-600">
+        <a href="/docs/casestudy-article51A(a)" className="hover:text-red-600">
           View Documentation 🔗
         </a>
       ),
@@ -55,7 +55,7 @@ const Casestudies = () => {
       image: casestudy1png,
       intro: "The Flag Code of India lays down the rules for the display and respect for the Indian national flag.",
       view: (
-        <a href="/docs/flag-code-india" className="hover:text-red-600">
+        <a href="/docs/casestudy-article51A(b)" className="hover:text-red-600">
           View Documentation 🔗
         </a>
       ),
@@ -66,7 +66,7 @@ const Casestudies = () => {
       image: casestudy1png,
       intro: "This case led to the interpretation of the scope of Article 368 and the power of Parliament to amend the Constitution.",
       view: (
-        <a href="/docs/indira-gandhi-raj-narain" className="hover:text-red-600">
+        <a href="/docs/casestudy-article51A(c)" className="hover:text-red-600">
           View Documentation 🔗
         </a>
       ),
@@ -88,7 +88,7 @@ const Casestudies = () => {
       image: casestudy1png,
       intro: "This case addressed the conflict between the Directive Principles of State Policy and Fundamental Rights.",
       view: (
-        <a href="/docs/casestudy-article46" className="hover:text-red-600">
+        <a href="/docs/casestudy-article46-1" className="hover:text-red-600">
           View Documentation 🔗
         </a>
       ),
@@ -99,7 +99,7 @@ const Casestudies = () => {
       image: casestudy1png,
       intro: "This case involved the issue of reservations in higher educational institutions and their impact on the rights of citizens.",
       view: (
-        <a href="/docs/casestudy-article46" className="hover:text-red-600">
+        <a href="/docs/casestudy-article46-2" className="hover:text-red-600">
           View Documentation 🔗
         </a>
       ),
