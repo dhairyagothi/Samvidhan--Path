@@ -35,6 +35,7 @@ import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
 import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
 import PuzzleGame from "./components/pages/Games/Puzzle/Game";
+import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -90,6 +91,7 @@ const App = () => {
           <Route path="/signin" element={<Signin />} />
           <Route path="/translate" element={<GoogleTranslate />} />
           <Route path="/quiz" element={<QuizComponent />} />
+          <Route path="/games/word-search" element={<WordSearch />} />
           <Route path="/games/puzzle" element={<PuzzleIntro />} />
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
         </Routes>
