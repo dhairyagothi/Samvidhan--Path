@@ -9,7 +9,7 @@ const GoogleTranslate = () => {
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
-            includedLanguages: "en,hi,pa,sa,mr,ur,bn,ta,te,kn,ml,gu,or,as", 
+            includedLanguages: "en,hi,pa,sa,mr,ur,bn,ta,te,kn,ml,gu,or,as,ne,si,bo,ks,tcy,sd,kon",
             layout:
               window.google.translate.TranslateElement.InlineLayout.HORIZONTAL,
             defaultLanguage: "en",
