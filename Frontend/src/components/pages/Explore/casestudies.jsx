@@ -28,7 +28,7 @@ const Casestudies = () => {
     },
     {
       title: "Kesavananda Bharati v. State of Kerala (1973)",
-      article: "Article 51A(a)",
+      article: "Article 51A(a),39(b) & (c)",
       image: casestudy1png,
       intro: "This case is known for establishing the Basic Structure Doctrine, which limited the power of Parliament to amend the Constitution.",
       view: "/docs/casestudy-article51A(a)" ,
@@ -47,13 +47,7 @@ const Casestudies = () => {
       intro: "This case led to the interpretation of the scope of Article 368 and the power of Parliament to amend the Constitution.",
       view: "/docs/casestudy-article51A(c)" ,
     },
-    {
-      title: "Kesavananda Bharati vs. State of Kerala (1973)",
-      article: "Article 39(b) & (c)",
-      image: casestudy1png,
-      intro: "In this case, the Supreme Court upheld the primacy of the Directive Principles of State Policy over fundamental rights.",
-      view: "/docs/casestudy-article39" ,
-    },
+    
     {
       title: "State of Madras vs. Champakam Dorairajan (1951)",
       article: "Article 46",
@@ -95,11 +89,11 @@ const Casestudies = () => {
               <p className="mt-2 text-sm text-gray-600">{casestudy.intro}</p>
               <div className="flex justify-between mt-4">
                 
-              <a
+              <motion.a
               href={casestudy.view}
               className="primary-btn !mt-8 inline-flex items-center gap-4 group"> Read More 
-              <MdArrowOutward className="duration-200 group-hover:animate-bounce group-hover:text-lg" />
-            </a>
+              <MdArrowOutward className="duration-200 animate-bounce group-hover:text-lg" />
+            </motion.a>
               </div>
             </div>
           </motion.div>
