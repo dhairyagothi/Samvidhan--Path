@@ -36,6 +36,7 @@ import QuizComponent from "./components/pages/Quiz/QuizComponent";
 import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
 import PuzzleGame from "./components/pages/Games/Puzzle/Game";
 import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
+import AboutUs from "./components/pages/AboutUs";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -74,6 +75,7 @@ const App = () => {
           <Route path="/engage" element={<Engage />} />
           <Route path="/games" element={<Games />} />
           <Route path="/ebooks" element={<Ebooks />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/casestudies" element={<CaseStudies />} />
           <Route path="/constitution/preamble" element={<Preamble />} />
           <Route path="/constitution/history" element={<History />} />
