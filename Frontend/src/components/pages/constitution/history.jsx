@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import image1949 from "../../../assets/1949.jpg";
+import image1950i from "../../../assets/1950i.jpg";
 
 
 
@@ -61,7 +62,7 @@ const timelineEvents = [
       title: "Final Signing of the Constitution",
       description: `The members of the Constituent Assembly signed the final version of the Constitution. The signed document 
                     had a preamble, 395 articles, and 8 schedules.`,
-      image: "https://via.placeholder.com/150?text=Signing", // Replace with an actual image URL
+      image: image1950i, // Replace with an actual image URL
     },
     {
       year: "26 Jan 1950",
