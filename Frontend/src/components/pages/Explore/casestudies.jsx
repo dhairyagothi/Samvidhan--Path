@@ -4,6 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 import casestudy1png from "../../../assets/samvidhanpath.png"; // Make sure to update the paths
 import imageCS1 from "../../../assets/CS1.png"; 
 import imagecs2 from "../../../assets/cs2.png"; 
+import imagecs3 from "../../../assets/cs3.png"; 
 
 const Casestudies = () => {
   const casestudies = [
@@ -24,7 +25,7 @@ const Casestudies = () => {
     {
       title: "Maneka Gandhi vs Union of India (1978)",
       article: "Article 19(1)(a)",
-      image: casestudy1png,
+      image: imagecs3,
       intro: "This case emphasized the importance of personal liberty and the right to free speech under Article 19(1)(a).",
       view: "/docs/casestudy-article19" ,
     },
