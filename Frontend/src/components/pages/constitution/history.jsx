@@ -13,6 +13,7 @@ import image1950ii from "../../../assets/1950ii.jpg";
 import image1960 from "../../../assets/1960.jpg";
 import image1976 from "../../../assets/1976.jpg";
 import image2002 from "../../../assets/2002.jpg";
+import image2024 from "../../../assets/2024.jpg";
 
 
 
@@ -106,7 +107,7 @@ const timelineEvents = [
       title: "Latest Amendments",
       description: `The Constitution continues to evolve, reflecting the changing needs and aspirations of the Indian people. 
                     As of today, it has undergone 105 amendments.`,
-      image: "https://via.placeholder.com/150?text=Amendments", // Replace with an actual image URL
+      image: image2024, // Replace with an actual image URL
     },
   ];
  
