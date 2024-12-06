@@ -7,6 +7,8 @@ import image1940 from "../../../assets/1940.jpg";
 import image19461 from "../../../assets/19461.jpg";
 import image19462 from "../../../assets/19462.jpg";
 import image1949 from "../../../assets/1949.jpg";
+import image1950i from "../../../assets/1950i.jpg";
+import image1950ii from "../../../assets/1950ii.jpg";
 
 
 
@@ -66,14 +68,14 @@ const timelineEvents = [
       title: "Final Signing of the Constitution",
       description: `The members of the Constituent Assembly signed the final version of the Constitution. The signed document 
                     had a preamble, 395 articles, and 8 schedules.`,
-      image: "https://via.placeholder.com/150?text=Signing", // Replace with an actual image URL
+      image: image1950i, // Replace with an actual image URL
     },
     {
       year: "26 Jan 1950",
       title: "Constitution Came into Effect",
       description: `The Constitution of India came into effect, replacing the Government of India Act, 1935. 
                     This day is celebrated as Republic Day, marking India's transformation into a sovereign democratic republic.`,
-      image: "https://via.placeholder.com/150?text=Republic", // Replace with an actual image URL
+      image: image1950ii, // Replace with an actual image URL
     },
     {
       year: "1960",
