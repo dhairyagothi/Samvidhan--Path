@@ -5,6 +5,7 @@ import casestudy1png from "../../../assets/samvidhanpath.png"; // Make sure to u
 import imageCS1 from "../../../assets/CS1.png"; 
 import imagecs2 from "../../../assets/cs2.png"; 
 import imagecs3 from "../../../assets/cs3.png"; 
+import imagecs4 from "../../../assets/cs4.png"; 
 
 const Casestudies = () => {
   const casestudies = [
@@ -32,7 +33,7 @@ const Casestudies = () => {
     {
       title: "Kesavananda Bharati v. State of Kerala (1973)",
       article: "Article 51A(a),39(b) & (c)",
-      image: casestudy1png,
+      image: imagecs4,
       intro: "This case is known for establishing the Basic Structure Doctrine, which limited the power of Parliament to amend the Constitution.",
       view: "/docs/casestudy-article51A(a)" ,
     },
