@@ -45,7 +45,11 @@ const TextToSpeech = () => {
   
     // Marathi (mr-IN) - Text containing Devanagari script (but excluding Hindi specific range)
     if (/[उ-य़]/.test(text)) return "mr-IN"; // Marathi
-  
+    if (/[\u0B80-\u0BFF]/.test(text)) return "ta-IN";
+     // Tamil (ta-IN) - Text containing Tamil script
+  if (/[அ]/.test(text)) return "ta-IN"; // Tamil
+  // More accurate Tamil regex to avoid overlap
+  if (/[௰-௹]/.test(text)) return "ta-IN"; // Tamil-specific symbols
     // Gujarati (gu-IN) - Text containing Gujarati script
     if (/[અ-હ]/.test(text)) return "gu-IN"; // Gujarati
   
@@ -68,7 +72,7 @@ const TextToSpeech = () => {
       },
       audioConfig: {
         audioEncoding: "MP3",
-        speakingRate: language === "hi-IN" || language === "mr-IN" ? 0.9 : 1, // Adjust speed for specific languages
+        speakingRate: language  ? 0.7 : 1, // Adjust speed for specific languages
         pitch: 0,
       },
     };
