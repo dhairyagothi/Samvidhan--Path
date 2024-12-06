@@ -8,6 +8,7 @@ import imagecs3 from "../../../assets/cs3.png";
 import imagecs4 from "../../../assets/cs4.png"; 
 import imagecs5 from "../../../assets/cs5.jpg"; 
 import imagecs6 from "../../../assets/cs6.jpg"; 
+import imagecs7 from "../../../assets/cs7.jpg"; 
 
 
 const Casestudies = () => {
@@ -58,7 +59,7 @@ const Casestudies = () => {
     {
       title: "State of Madras vs. Champakam Dorairajan (1951)",
       article: "Article 46",
-      image: casestudy1png,
+      image: imagecs7,
       intro: "This case addressed the conflict between the Directive Principles of State Policy and Fundamental Rights.",
       view: "/docs/casestudy-article46-1" ,
     },
