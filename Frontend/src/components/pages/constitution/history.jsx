@@ -6,6 +6,7 @@ import image1935 from "../../../assets/1935.jpg";
 import image1940 from "../../../assets/1940.jpg";
 import image19461 from "../../../assets/19461.jpg";
 import image19462 from "../../../assets/19462.jpg";
+import image1947 from "../../../assets/1947.jpg";
 import image1949 from "../../../assets/1949.jpg";
 import image1950i from "../../../assets/1950i.jpg";
 import image1950ii from "../../../assets/1950ii.jpg";
@@ -55,7 +56,7 @@ const timelineEvents = [
       title: "Formation of Drafting Committee",
       description: `The Drafting Committee was formed, with Dr. B.R. Ambedkar as its Chairman. This committee was entrusted 
                     with the responsibility of drafting the Indian Constitution.`,
-      image: "https://via.placeholder.com/150?text=Drafting", // Replace with an actual image URL
+      image: image1947, // Replace with an actual image URL
     },
     {
       year: "26 Nov 1949",
