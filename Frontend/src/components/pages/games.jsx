@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import gameImage1 from "../../assets/citizens.png"; // Replace with actual image path
+import imagegame1 from "../../assets/game1.png";
+
 
 
 const GamesPage = () => {
@@ -9,7 +11,7 @@ const GamesPage = () => {
     {
       title: "Crossword",
       description: "Test your knowledge of the Indian Constitution with this fun crossword puzzle.",
-      image: gameImage1,
+      image: imagegame1,
       link: "/games/crossword",
     },
     {
