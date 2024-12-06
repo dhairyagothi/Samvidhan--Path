@@ -9,6 +9,7 @@ import image19462 from "../../../assets/19462.jpg";
 import image1949 from "../../../assets/1949.jpg";
 import image1950i from "../../../assets/1950i.jpg";
 import image1950ii from "../../../assets/1950ii.jpg";
+import image1960 from "../../../assets/1960.jpg";
 
 
 
@@ -82,7 +83,7 @@ const timelineEvents = [
       title: "First Amendment to the Constitution",
       description: `The first amendment to the Constitution was enacted to address issues related to land reforms, the right to equality, 
                     and freedom of speech.`,
-      image: "https://via.placeholder.com/150?text=Amendment1", // Replace with an actual image URL
+      image: image1960, // Replace with an actual image URL
     },
     {
       year: "1976",
