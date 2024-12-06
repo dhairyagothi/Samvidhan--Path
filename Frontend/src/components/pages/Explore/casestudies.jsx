@@ -2,13 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import casestudy1png from "../../../assets/samvidhanpath.png"; // Make sure to update the paths
+import imageCS1 from "../../../assets/CS1.png"; 
 
 const Casestudies = () => {
   const casestudies = [
     {
       title: "Indra Sawhney vs Union of India (1992)",
       article: "Article 12",
-      image: casestudy1png,
+      image: imageCS1,
       intro: "This landmark case discusses the definition of the term 'State' under Article 12 of the Constitution of India.",
       view: "/docs/casestudy-article12" ,
     },
