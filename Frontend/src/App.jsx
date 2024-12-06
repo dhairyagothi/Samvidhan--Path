@@ -61,6 +61,7 @@ const App = () => {
     <Router>
       <main className="overflow-x-hidden bg-white text-dark">
         <Navbar />
+        <main>
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/services" element={<Services />} />
@@ -99,6 +100,7 @@ const App = () => {
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
           
         </Routes>
+        </main>
         <Footer />
         <Analytics />
       </main>
