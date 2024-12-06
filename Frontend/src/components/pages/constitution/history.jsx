@@ -1,18 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import image1932 from "../../../assets/1932.jpg";
 import image1935 from "../../../assets/1935.jpg";
 import image1940 from "../../../assets/1940.jpg";
 import image19461 from "../../../assets/19461.jpg";
 import image19462 from "../../../assets/19462.jpg";
-=======
 import image1949 from "../../../assets/1949.jpg";
 
 
 
->>>>>>> a025af164b18d158e918803319ab7b2874e0b569
 
 const timelineEvents = [
     {
