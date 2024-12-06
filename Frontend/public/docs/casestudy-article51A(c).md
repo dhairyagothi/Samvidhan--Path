@@ -63,13 +63,6 @@ The judgment reinforced the importance of **Article 51A(c)**, reminding citizens
 
 ---
 
-## **SEO-Optimized Takeaways**  
-- **Title Tags**: "Indira Nehru Gandhi v. Raj Narain (1975): Landmark Case on Democracy and Article 51A"  
-- **Meta Description**: Explore the pivotal 1975 case of Indira Gandhi v. Raj Narain, which redefined the balance of power under Article 368 and reinforced the Basic Structure Doctrine.  
-- **Keywords**: Indira Gandhi v. Raj Narain, Article 51A, Basic Structure Doctrine, Rule of Law, 39th Amendment, National Emergency.  
-
----
-
 
 ![alt text](image-24.png)
 

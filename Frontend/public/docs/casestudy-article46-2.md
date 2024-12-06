@@ -73,13 +73,6 @@ Ashoka Kumar Thakur, a legal practitioner, filed a Public Interest Litigation (P
 
 ---
 
-## **SEO-Optimized Takeaways**  
-- **Title Tags**: "Ashoka Kumar Thakur vs. Union of India (2008): Article 46 and Reservations in Education"  
-- **Meta Description**: Learn about the Ashoka Kumar Thakur case, which upheld reservations in education under Article 46 while setting limits to ensure fairness.  
-- **Keywords**: Ashoka Kumar Thakur case, Article 46, reservations in education, Supreme Court judgment, creamy layer, affirmative action, social justice.  
-
----
-
 ## **Conclusion**  
 The **Ashoka Kumar Thakur vs. Union of India (2008)** case solidified the role of reservations as a tool for social justice while balancing it with the principles of meritocracy and equality. The Supreme Court’s nuanced approach ensured that affirmative action policies remain effective, equitable, and constitutionally sound.
 
