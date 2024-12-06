@@ -1,11 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import image1932 from "../../../assets/1932.jpg";
 import image1935 from "../../../assets/1935.jpg";
 import image1940 from "../../../assets/1940.jpg";
 import image19461 from "../../../assets/19461.jpg";
 import image19462 from "../../../assets/19462.jpg";
+=======
+import image1949 from "../../../assets/1949.jpg";
+
+
+
+>>>>>>> a025af164b18d158e918803319ab7b2874e0b569
 
 const timelineEvents = [
     {
@@ -55,7 +62,7 @@ const timelineEvents = [
       title: "Adoption of the Constitution",
       description: `After extensive deliberations and debates, the Constituent Assembly formally adopted the Constitution of India. 
                     This day is celebrated as Constitution Day in India.`,
-      image: "https://via.placeholder.com/150?text=Adoption", // Replace with an actual image URL
+      image: image1949, // Replace with an actual image URL
     },
     {
       year: "24 Jan 1950",
