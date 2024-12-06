@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import image1932 from "../../../assets/1932.jpg";
+import image1935 from "../../../assets/1935.jpg";
+import image1940 from "../../../assets/1940.jpg";
+import image19461 from "../../../assets/19461.jpg";
+import image19462 from "../../../assets/19462.jpg";
 import image1949 from "../../../assets/1949.jpg";
 import image1950i from "../../../assets/1950i.jpg";
 
@@ -13,35 +18,35 @@ const timelineEvents = [
       title: "Idea of Constituent Assembly",
       description: `The concept of a Constituent Assembly was first proposed by M.N. Roy, a pioneer of the communist movement in India. 
                     This idea later gained momentum and became a significant step towards India's independence and drafting of its own constitution.`,
-      image: "https://via.placeholder.com/150?text=1934", // Replace with an actual image URL
+      image:image1932, // Replace with an actual image URL
     },
     {
       year: "1935",
       title: "Government of India Act, 1935",
       description: `The Government of India Act, 1935, was enacted by the British Parliament. While it did not give India complete self-rule, 
                     it laid the administrative foundation and highlighted the need for a robust Constitution.`,
-      image: "https://via.placeholder.com/150?text=1935", // Replace with an actual image URL
+      image: image1935, // Replace with an actual image URL
     },
     {
       year: "1940",
       title: "Demand for Constitution",
       description: `The Indian National Congress officially demanded the establishment of a Constituent Assembly. 
                     This demand was later recognized by the British government during the August Offer.`,
-      image: "https://via.placeholder.com/150?text=1940", // Replace with an actual image URL
+      image: image1940, // Replace with an actual image URL
     },
     {
       year: "1946",
       title: "Formation of Constituent Assembly",
       description: `Under the Cabinet Mission Plan, the Constituent Assembly was formed, consisting of 389 members 
                     representing provinces and princely states. This marked the beginning of India's journey to draft its Constitution.`,
-      image: "https://via.placeholder.com/150?text=1946", // Replace with an actual image URL
+      image: image19461, // Replace with an actual image URL
     },
     {
       year: "9 Dec 1946",
       title: "First Meeting of Constituent Assembly",
       description: `The first session of the Constituent Assembly was held in New Delhi. Dr. Sachchidananda Sinha was elected as 
                     the interim President for this historic gathering.`,
-      image: "https://via.placeholder.com/150?text=1946Meeting", // Replace with an actual image URL
+      image: image19462, // Replace with an actual image URL
     },
     {
       year: "29 Aug 1947",
