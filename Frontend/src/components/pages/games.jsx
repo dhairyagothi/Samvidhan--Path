@@ -5,6 +5,7 @@ import gameImage1 from "../../assets/citizens.png"; // Replace with actual image
 import imagegame1 from "../../assets/game1.png";
 import imagegame2 from "../../assets/game2.jpg";
 import imagegame3 from "../../assets/game3.jpeg";
+import imagegame4 from "../../assets/game4.png";
 
 const GamesPage = () => {
   const games = [
@@ -29,7 +30,7 @@ const GamesPage = () => {
     {
       title: "Puzzle",
       description: "Solve puzzles and learn about the Indian Constitution in a fun and interactive way.",
-      image: gameImage1,
+      image: imagegame4,
       link: "/games/puzzle",
     },
     
