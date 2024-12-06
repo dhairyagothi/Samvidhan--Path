@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 import gameImage1 from "../../assets/citizens.png"; // Replace with actual image path
 import imagegame1 from "../../assets/game1.png";
 import imagegame2 from "../../assets/game2.jpg";
-
+import imagegame3 from "../../assets/game3.jpeg";
 
 const GamesPage = () => {
   const games = [
@@ -23,7 +23,7 @@ const GamesPage = () => {
     {
       title: "Word Search",
       description: "Find hidden words related to the Indian Constitution in this engaging word search game.",
-      image: gameImage1,
+      image: imagegame3,
       link: "/games/word-search",
     },
     {
