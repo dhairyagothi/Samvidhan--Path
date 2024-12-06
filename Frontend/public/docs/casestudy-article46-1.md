@@ -68,13 +68,6 @@ It established a judicial framework to balance the enforcement of DPSPs and Fund
 
 ---
 
-## **SEO-Optimized Takeaways**  
-- **Title Tags**: "State of Madras vs. Champakam Dorairajan (1951): Article 46 and Fundamental Rights"  
-- **Meta Description**: Explore the Champakam Dorairajan case, where the Supreme Court upheld Fundamental Rights over Directive Principles, shaping affirmative action policies in India.  
-- **Keywords**: Champakam Dorairajan case, Article 46, Directive Principles, Fundamental Rights, affirmative action, Supreme Court judgment.  
-
----
-
 ## **Conclusion**  
 The **State of Madras vs. Champakam Dorairajan (1951)** case marked a critical juncture in Indian constitutional law. By upholding the primacy of Fundamental Rights over Directive Principles, the judgment ensured that equality and individual freedoms remain the cornerstone of Indian democracy. It also laid the groundwork for future affirmative action policies under **Article 15(4)**.
 
