@@ -1,10 +1,11 @@
-import React, { useState } from "react";;
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import samvidhanPathLogo from "../../assets/samvidhanpath.png";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { MdAccessibility, MdOutlineLanguage } from "react-icons/md";
+import { MdAccessibility } from "react-icons/md";
 import { FaHighlighter, FaTextHeight } from "react-icons/fa";
+import TextToSpeech from "../TexttoSpeach";
 import GoogleTranslate from "../Language";
 
 const NavbarMenu = [
@@ -28,7 +29,9 @@ const NavbarMenu = [
     ],
   },
   {
-    id: 4, title: "For Citizen", path: "/citizen",
+    id: 4,
+    title: "For Citizen",
+    path: "/citizen",
     submenu: [
       { id: 1, title: "Fundamental Rights", path: "/citizen/rights" },
       { id: 2, title: "Fundamental Duties", path: "/citizen/duties" },
@@ -36,10 +39,11 @@ const NavbarMenu = [
       { id: 4, title: "Amendment", path: "/citizen/amendment" },
       { id: 5, title: "Schedules", path: "/citizen/schedules" },
     ],
-
   },
   {
-    id: 5, title: "Engage", path: "/engage",
+    id: 5,
+    title: "Engage",
+    path: "/engage",
     submenu: [
       { id: 1, title: "Discussion Forum", path: "/engage/discussionforum" },
       { id: 2, title: "Blog", path: "/engage/blog" },
@@ -49,7 +53,9 @@ const NavbarMenu = [
   },
   { id: 6, title: "E-Books", path: "/ebooks" },
   {
-    id: 7, title: "Games", path: "/games",
+    id: 7,
+    title: "Games",
+    path: "/games",
     submenu: [
       { id: 1, title: "Crossword", path: "/games/crossword" },
       { id: 2, title: "Quiz", path: "/quiz" },
@@ -57,19 +63,19 @@ const NavbarMenu = [
       { id: 4, title: "Puzzle", path: "/games/puzzle" },
     ],
   },
-
   { id: 8, title: "Contact Us", path: "/contact" },
-
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTextResizer, setShowTextResizer] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const navigate = useNavigate();
-  const [activeMenu, setActiveMenu] = useState(null);
 
   const handleMenuClick = (path) => {
     navigate(path);
@@ -82,20 +88,63 @@ const Navbar = () => {
   const Signinclick = () => {
     navigate("/signin");
   };
+
   return (
     <>
-        <div className="border-b shadow-sm bg-yellow-50">
-      <div className="container flex items-center justify-between px-2 lg:px-5">
-        {/* Accessibility Icons */}
-        <div className="flex items-center space-x-4 text-gray-700">
-          <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
-          <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
-          <FaTextHeight size={24} className="cursor-pointer hover:text-black" title="Text Resize" />
+      {/* Accessibility Bar */}
+      <div className="border-b shadow-sm bg-yellow-50">
+        <div className="container flex items-center justify-between px-2 lg:px-5">
+          {/* Accessibility Icons */}
+          <div className="flex items-center space-x-4 text-gray-700">
+            <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
+            <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
+            <FaTextHeight
+              size={24}
+              className="cursor-pointer hover:text-black"
+              title="Text Resize"
+              onClick={() => setShowTextResizer(true)} // Show the Text Resizer popup
+            />
+          {/* <TextToSpeech />  */}
+          </div>
+          {/* Google Translate */}
+          <GoogleTranslate />
         </div>
-        {/* Google Translate */}
-        <GoogleTranslate />
       </div>
-    </div>
+
+      {/* Text Resizer Popup */}
+      {showTextResizer && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="w-full max-w-sm p-5 bg-white rounded-lg shadow-lg">
+            <div className="text-xl font-semibold">Text Resizer</div>
+            <div className="flex mt-4 space-x-2">
+              <button
+                onClick={() => document.documentElement.className = "text-sm"}
+                className="px-4 py-2 text-sm bg-gray-200 rounded hover:bg-gray-300"
+              >
+                Small
+              </button>
+              <button
+                onClick={() => document.documentElement.className = "text-base"}
+                className="px-4 py-2 text-sm bg-gray-200 rounded hover:bg-gray-300"
+              >
+                Medium
+              </button>
+              <button
+                onClick={() => document.documentElement.className = "text-lg"}
+                className="px-4 py-2 text-sm bg-gray-200 rounded hover:bg-gray-300"
+              >
+                Large
+              </button>
+            </div>
+            <button
+              onClick={() => setShowTextResizer(false)} // Close the popup
+              className="px-4 py-2 mt-4 text-white bg-red-500 rounded hover:bg-red-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     <nav className="relative z-20 shadow-md">
       <motion.div
         initial={{ opacity: 0, y: -50 }}

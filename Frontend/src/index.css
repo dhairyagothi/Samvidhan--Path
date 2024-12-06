@@ -13,3 +13,65 @@
     filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.5));
   }
 }
+
+.text-sm {
+  font-size: 12px;
+}
+
+.text-base {
+  font-size: 16px;
+}
+
+.text-lg {
+  font-size: 20px;
+}
+
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f0ad4e; /* Your page theme color */
+  border-radius: 10px;
+  border: 3px solid #ffffff; /* Optional border for thumb */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ec971f; /* Darker shade when hovering */
+}
+
+/* Scrollbar track styling */
+::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add some bounce to the scroll thumb for an animating effect */
+@keyframes scrollBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  animation: scrollBounce 2s infinite ease-in-out;
+}
+
+/* Smooth scroll for the entire page */
+html {
+  scroll-behavior: smooth;
+}

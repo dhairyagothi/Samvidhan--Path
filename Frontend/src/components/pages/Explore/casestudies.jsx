@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
-import casestudy1png from "../../../assets/book1.png"; // Make sure to update the paths
+import casestudy1png from "../../../assets/samvidhanpath.png"; // Make sure to update the paths
 
 const Casestudies = () => {
   const casestudies = [
@@ -76,12 +76,12 @@ const Casestudies = () => {
             key={index}
             className="overflow-hidden bg-white rounded-lg shadow-lg"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            
           >
             <img
               src={casestudy.image}
               alt={casestudy.title}
-              className="object-cover w-full h-48"
+              className="object-cover w-full h-48 bg-black"
             />
             <div className="p-4">
               <h2 className="text-xl font-bold text-gray-900">{casestudy.title}</h2>

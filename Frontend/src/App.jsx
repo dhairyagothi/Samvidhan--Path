@@ -38,6 +38,7 @@ import PuzzleGame from "./components/pages/Games/Puzzle/Game";
 import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
 import AboutUs from "./components/pages/AboutUs";
 
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -96,6 +97,7 @@ const App = () => {
           <Route path="/games/word-search" element={<WordSearch />} />
           <Route path="/games/puzzle" element={<PuzzleIntro />} />
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
+          
         </Routes>
         <Footer />
         <Analytics />
