@@ -125,30 +125,51 @@ const TextToSpeech = () => {
   };
 
   return (
+    <>
+    <style>
+      {`
+        
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3); 
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+      `}
+    </style>
     <div>
       {!isSpeaking ? (
         <button
           onClick={handleReadOut}
           className="px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-400"
         >
-          <RiSpeakFill />
+          <RiSpeakFill className="cursor-pointer hover:text-black" title="Text to speach"/>
         </button>
       ) : (
         <button
           onClick={handleStopSpeech}
           className="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-400"
         >
-          <HiSpeakerXMark />
+          <HiSpeakerXMark className="cursor-pointer hover:text-black" title="Stop speaking" />
         </button>
       )}
 
       {isLoading && (
-        <div className="loader">
-          <p>Loading...</p>
+        <div className="loader ">
+          
           {/* You can replace this with a loading spinner or animation */}
         </div>
       )}
     </div>
+    </>
   );
 };
 
