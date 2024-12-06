@@ -12,7 +12,7 @@ import image1950i from "../../../assets/1950i.jpg";
 import image1950ii from "../../../assets/1950ii.jpg";
 import image1960 from "../../../assets/1960.jpg";
 import image1976 from "../../../assets/1976.jpg";
-
+import image2002 from "../../../assets/2002.jpg";
 
 
 
@@ -99,7 +99,7 @@ const timelineEvents = [
       title: "86th Amendment",
       description: `The 86th Amendment introduced the Right to Education as a fundamental right, making education free and compulsory 
                     for children aged 6 to 14 years.`,
-      image: "https://via.placeholder.com/150?text=Education", // Replace with an actual image URL
+      image: image2002, // Replace with an actual image URL
     },
     {
       year: "2024",
