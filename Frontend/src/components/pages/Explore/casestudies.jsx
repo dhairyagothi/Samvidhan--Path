@@ -9,6 +9,7 @@ import imagecs4 from "../../../assets/cs4.png";
 import imagecs5 from "../../../assets/cs5.jpg"; 
 import imagecs6 from "../../../assets/cs6.jpg"; 
 import imagecs7 from "../../../assets/cs7.jpg"; 
+import imagecs8 from "../../../assets/cs8.png";
 
 
 const Casestudies = () => {
@@ -66,7 +67,7 @@ const Casestudies = () => {
     {
       title: "Ashoka Kumar Thakur vs. Union of India",
       article: "Article 46",
-      image: casestudy1png,
+      image: imagecs8,
       intro: "This case involved the issue of reservations in higher educational institutions and their impact on the rights of citizens.",
       view: "/docs/casestudy-article46-2" ,
     },
