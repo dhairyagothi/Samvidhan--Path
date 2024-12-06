@@ -6,6 +6,8 @@ import imageCS1 from "../../../assets/CS1.png";
 import imagecs2 from "../../../assets/cs2.png"; 
 import imagecs3 from "../../../assets/cs3.png"; 
 import imagecs4 from "../../../assets/cs4.png"; 
+import imagecs5 from "../../../assets/cs5.jpg"; 
+
 
 const Casestudies = () => {
   const casestudies = [
@@ -40,7 +42,7 @@ const Casestudies = () => {
     {
       title: "The Flag Code of India",
       article: "Article 51A(b)",
-      image: casestudy1png,
+      image: imagecs5,
       intro: "The Flag Code of India lays down the rules for the display and respect for the Indian national flag.",
       view: "/docs/casestudy-article51A(b)" ,
     },
