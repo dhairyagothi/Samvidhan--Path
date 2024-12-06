@@ -7,6 +7,7 @@ import imagecs2 from "../../../assets/cs2.png";
 import imagecs3 from "../../../assets/cs3.png"; 
 import imagecs4 from "../../../assets/cs4.png"; 
 import imagecs5 from "../../../assets/cs5.jpg"; 
+import imagecs6 from "../../../assets/cs6.jpg"; 
 
 
 const Casestudies = () => {
@@ -49,7 +50,7 @@ const Casestudies = () => {
     {
       title: "Indira Nehru Gandhi v. Raj Narain (1975)",
       article: "Article 51A(c)",
-      image: casestudy1png,
+      image: imagecs6,
       intro: "This case led to the interpretation of the scope of Article 368 and the power of Parliament to amend the Constitution.",
       view: "/docs/casestudy-article51A(c)" ,
     },
