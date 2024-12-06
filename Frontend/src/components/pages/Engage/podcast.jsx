@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import imagepod1 from "../../../assets/pod1.png";
 const PodcastPage = () => {
   const [episodes, setEpisodes] = useState([
     {
@@ -8,7 +8,7 @@ const PodcastPage = () => {
       description:
         "An in-depth look at the Indian Constitution and its impact on governance.",
       audioUrl: "https://www.example.com/audio/episode1.mp3",
-      imageUrl: "https://via.placeholder.com/300x200?text=Episode+1", // Replace with actual image URL
+      imageUrl: imagepod1,
       duration: "12:34",
     },
     {
