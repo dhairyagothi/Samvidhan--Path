@@ -11,6 +11,7 @@ import image1949 from "../../../assets/1949.jpg";
 import image1950i from "../../../assets/1950i.jpg";
 import image1950ii from "../../../assets/1950ii.jpg";
 import image1960 from "../../../assets/1960.jpg";
+import image1976 from "../../../assets/1976.jpg";
 
 
 
@@ -91,7 +92,7 @@ const timelineEvents = [
       title: "42nd Amendment",
       description: `Known as the 'Mini Constitution,' the 42nd Amendment made significant changes, including the addition of the words 
                     "Socialist," "Secular," and "Integrity" to the Preamble.`,
-      image: "https://via.placeholder.com/150?text=42nd", // Replace with an actual image URL
+      image: image1976, // Replace with an actual image URL
     },
     {
       year: "2002",
