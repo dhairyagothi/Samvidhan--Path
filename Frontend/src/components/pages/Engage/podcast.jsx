@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import imagepod1 from "../../../assets/pod1.png";
 import imagepod2 from "../../../assets/pod2.png";
+import imagepod3 from "../../../assets/pod3.png";
 const PodcastPage = () => {
   const [episodes, setEpisodes] = useState([
     {
@@ -27,7 +28,7 @@ const PodcastPage = () => {
       description:
         "A discussion on the balance of rights and responsibilities in a democracy.",
       audioUrl: "https://www.example.com/audio/episode3.mp3",
-      imageUrl: imagepod2,
+      imageUrl: imagepod3,
       duration: "15:20",
     },
   ]);
