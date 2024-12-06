@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import image1949 from "../../../assets/1949.jpg";
+
+
+
 
 const timelineEvents = [
     {
@@ -50,7 +54,7 @@ const timelineEvents = [
       title: "Adoption of the Constitution",
       description: `After extensive deliberations and debates, the Constituent Assembly formally adopted the Constitution of India. 
                     This day is celebrated as Constitution Day in India.`,
-      image: "https://via.placeholder.com/150?text=Adoption", // Replace with an actual image URL
+      image: image1949, // Replace with an actual image URL
     },
     {
       year: "24 Jan 1950",
