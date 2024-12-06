@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import casestudy1png from "../../../assets/samvidhanpath.png"; // Make sure to update the paths
 import imageCS1 from "../../../assets/CS1.png"; 
+import imagecs2 from "../../../assets/cs2.png"; 
 
 const Casestudies = () => {
   const casestudies = [
@@ -16,7 +17,7 @@ const Casestudies = () => {
     {
       title: "Shreya Singhal vs Union of India (2015)",
       article: "Article 14",
-      image: casestudy1png,
+      image: imagecs2,
       intro: "A pivotal case that struck down Section 66A of the IT Act, recognizing the importance of free speech in the digital era.",
       view: "/docs/casestudy-article14" ,
     },
