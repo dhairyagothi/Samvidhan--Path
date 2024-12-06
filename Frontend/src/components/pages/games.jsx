@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import gameImage1 from "../../assets/citizens.png"; // Replace with actual image path
 import imagegame1 from "../../assets/game1.png";
-
+import imagegame2 from "../../assets/game2.jpg";
 
 
 const GamesPage = () => {
@@ -17,7 +17,7 @@ const GamesPage = () => {
     {
       title: "Quiz",
       description: "put your knowledge to the test with our interactive quiz on the Indian Constitution.",
-      image: gameImage1,
+      image: imagegame2,
       link: "/quiz",
     },
     {
