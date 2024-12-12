@@ -13,7 +13,7 @@ const Engage = () => {
       description:
         "Join the community and discuss a wide range of topics with fellow learners and experts.",
       icon: <BsFillFileEarmarkPdfFill />,
-      link: "/discussion-forum",
+      link: "/engage/discussionforum",
       delay: 0.2,
     },
     {
@@ -22,7 +22,7 @@ const Engage = () => {
       description:
         "Read insightful articles, research papers, and opinions from industry experts.",
       icon: <HiOutlineBookOpen />,
-      link: "/blog",
+      link: "/engage/blog",
       delay: 0.3,
     },
     {
@@ -31,7 +31,7 @@ const Engage = () => {
       description:
         "Listen to podcasts on various topics, from interviews to informative discussions.",
       icon: <FaPodcast />,
-      link: "/podcast",
+      link: "/engage/podcast",
       delay: 0.4,
     },
     {
@@ -40,7 +40,7 @@ const Engage = () => {
       description:
         "Watch educational videos, tutorials, interviews, and more to enhance your learning.",
       icon: <FaVideo />,
-      link: "/video",
+      link: "/engage/video",
       delay: 0.5,
     },
   ];
