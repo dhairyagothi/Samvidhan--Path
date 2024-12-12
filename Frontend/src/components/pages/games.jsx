@@ -2,32 +2,35 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import gameImage1 from "../../assets/citizens.png"; // Replace with actual image path
-
+import imagegame1 from "../../assets/game1.png";
+import imagegame2 from "../../assets/game2.jpg";
+import imagegame3 from "../../assets/game3.jpeg";
+import imagegame4 from "../../assets/game4.png";
 
 const GamesPage = () => {
   const games = [
     {
       title: "Crossword",
       description: "Test your knowledge of the Indian Constitution with this fun crossword puzzle.",
-      image: gameImage1,
+      image: imagegame1,
       link: "/games/crossword",
     },
     {
       title: "Quiz",
       description: "put your knowledge to the test with our interactive quiz on the Indian Constitution.",
-      image: gameImage1,
+      image: imagegame2,
       link: "/quiz",
     },
     {
       title: "Word Search",
       description: "Find hidden words related to the Indian Constitution in this engaging word search game.",
-      image: gameImage1,
+      image: imagegame3,
       link: "/games/word-search",
     },
     {
       title: "Puzzle",
       description: "Solve puzzles and learn about the Indian Constitution in a fun and interactive way.",
-      image: gameImage1,
+      image: imagegame4,
       link: "/games/puzzle",
     },
     

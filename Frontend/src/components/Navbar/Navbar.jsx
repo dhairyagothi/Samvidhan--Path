@@ -104,7 +104,7 @@ const Navbar = () => {
               title="Text Resize"
               onClick={() => setShowTextResizer(true)} // Show the Text Resizer popup
             />
-          {/* <TextToSpeech />  */}
+          <TextToSpeech /> 
           </div>
           {/* Google Translate */}
           <GoogleTranslate />
