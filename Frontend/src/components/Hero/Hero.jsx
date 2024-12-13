@@ -31,7 +31,7 @@ export const FadeUp = (delay) => {
 const Hero = () => {
   return (
     <>
-    <section className="relative overflow-hidden bg-light">
+    <section className="relative overflow-hidden text-black bg-white dark:bg-gray-800 dark:text-white">
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Brand Info */}
         <div className="relative flex flex-col justify-center py-14 md:py-0">

@@ -7,7 +7,7 @@ import { MdAccessibility } from "react-icons/md";
 import { FaHighlighter, FaTextHeight } from "react-icons/fa";
 import TextToSpeech from "../TexttoSpeach";
 import GoogleTranslate from "../Language";
-
+import ThemeChange from "../Themechange";
 const NavbarMenu = [
   { id: 1, title: "Home", path: "/" },
   {
@@ -92,10 +92,10 @@ const Navbar = () => {
   return (
     <>
       {/* Accessibility Bar */}
-      <div className="border-b shadow-sm bg-yellow-50">
-        <div className="container flex items-center justify-between px-2 lg:px-5">
+      <div className="text-black shadow-lg bg-yellow-50 dark:bg-gray-800 dark:text-white">
+        <div className="container flex items-center justify-between px-2 text-black bg-white lg:px-5 dark:bg-gray-800 dark:text-white">
           {/* Accessibility Icons */}
-          <div className="flex items-center space-x-4 text-gray-700">
+          <div className="flex items-center space-x-4 text-black text-gray-700 bg-white dark:bg-gray-800 dark:text-white" >
             <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
             <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
             <FaTextHeight
@@ -105,6 +105,7 @@ const Navbar = () => {
               onClick={() => setShowTextResizer(true)} // Show the Text Resizer popup
             />
           <TextToSpeech /> 
+          <ThemeChange/>
           </div>
           {/* Google Translate */}
           <GoogleTranslate />
@@ -145,7 +146,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    <nav className="relative z-20 shadow-md">
+    <nav className="relative z-20 text-black bg-white shadow-md dark:bg-gray-800 dark:text-white">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -160,12 +161,12 @@ const Navbar = () => {
           </div>
         </div>
         {/* Menu section */}
-        <div className="hidden lg:block">
-          <ul className="flex items-center gap-6">
+        <div className="hidden text-black bg-white lg:block dark:bg-gray-800 dark:text-white">
+          <ul className="flex items-center gap-6 text-black bg-white dark:bg-gray-800 dark:text-white">
             {NavbarMenu.map((menu) => (
               <li
                 key={menu.id}
-                className="relative group"
+                className="relative text-black bg-white group dark:bg-gray-800 dark:text-white"
                 onMouseEnter={() => menu.submenu && toggleSubmenu(menu.id)}
                 onMouseLeave={() => menu.submenu && toggleSubmenu(null)}
               >
@@ -183,7 +184,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute left-0 w-48 mt-2 bg-white border shadow-lg top-full "
+                      className="absolute left-0 w-48 mt-2 text-black bg-white border shadow-lg top-full dark:bg-gray-800 dark:text-white"
                     >
                       {menu.submenu.map((sub, index) => (
                         <motion.li

@@ -44,7 +44,7 @@ const Banner = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 gap-8 space-y-6 py-14 md:py-24 md:grid-cols-2 md:space-y-0">
+      <div className="grid grid-cols-1 gap-8 space-y-6 text-black bg-white py-14 md:py-24 md:grid-cols-2 md:space-y-0 dark:bg-gray-800 dark:text-white">
         {/* Banner Image */}
         <div className="flex items-center justify-center">
           <motion.img
@@ -65,7 +65,7 @@ const Banner = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold text-gray-800 !leading-snug"
+              className="text-3xl md:text-4xl font-bold text-gray-800 !leading-snug "
             >
               Your Gateway to Rights, Duties, and the Constitution's Core!
             </motion.h1>

@@ -9,7 +9,7 @@ const PodcastPage = () => {
       title: "Understanding the Indian Constitution",
       description:
         "An in-depth look at the Indian Constitution and its impact on governance.",
-      audioUrl: "https://www.example.com/audio/episode1.mp3",
+      audioUrl: "https://open.spotify.com/show/25fAY83tLbdGzXagvOadmX?si=e0a5076b5ac74dc4&nd=1&dlsi=82623eaa5e544404",
       imageUrl: imagepod1,
       duration: "12:34",
     },

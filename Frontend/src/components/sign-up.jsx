@@ -6,10 +6,11 @@ import { Client, Account } from "appwrite";
 const client = new Client().setProject("675b364a00240d898950");
 const account = new Account(client);
 
-const SignIn = () => {
+const SignUp = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    name: "",
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -25,31 +26,39 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Attempt to create an email session
-      await account.createEmailSession(formData.email, formData.password);
-
-      // Fetch account details to check if the email is verified
-      const user = await account.get();
-
-      if (!user.emailVerification) {
-        setError("Please verify your email to log in.");
-        await account.createEmailVerification(); // Send email verification again
-      } else {
-        navigate("/dashboard"); // Redirect to dashboard after successful login
-      }
+      // Create user account with Appwrite
+      const user = await account.create(
+        "unique()", // USER_ID - You can replace with dynamic logic if required
+        formData.email,
+        formData.password,
+        formData.name
+      );
+      console.log(user); // Log the user object for verification
+      // Send email verification
+      await account.createEmailVerification();
+      alert("Account created successfully! Please check your email for verification.");
+      navigate("/signin"); // Redirect to SignIn page after successful sign-up
     } catch (err) {
-      setError("Invalid email or password."); // Handle login errors
+      setError(err.message); // Display any errors
     }
   };
 
   return (
     <section className="px-8 py-16 bg-gray-50">
       <div className="container mx-auto mb-12 text-center">
-        <h1 className="text-4xl font-bold text-gray-800">Welcome Back!</h1>
+        <h1 className="text-4xl font-bold text-gray-800">Create an Account</h1>
       </div>
       <div className="flex justify-center">
         <form onSubmit={handleSubmit} className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
           {error && <p className="mb-4 text-red-500">{error}</p>}
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            onChange={handleChange}
+            required
+            className="w-full p-3 mb-4 border"
+          />
           <input
             type="email"
             name="email"
@@ -67,7 +76,7 @@ const SignIn = () => {
             className="w-full p-3 mb-6 border"
           />
           <button type="submit" className="w-full p-3 text-white bg-yellow-500 rounded-md">
-            Sign In
+            Sign Up
           </button>
         </form>
       </div>
@@ -75,4 +84,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

@@ -25,7 +25,7 @@ const Banner2 = () => {
 
   return (
     <section>
-      <div className="container grid grid-cols-1 gap-8 m-0 space-y-6 place-items-center py-14 md:m-10 md:py-24 md:grid-cols-2 md:space-y-0">
+      <div className="container grid grid-cols-1 gap-8 m-0 space-y-6 text-black bg-white place-items-center py-14 md:m-10 md:py-24 md:grid-cols-2 md:space-y-0 dark:bg-gray-800 dark:text-white">
         {/* Banner Text */}
         <motion.div
           initial="hidden"
