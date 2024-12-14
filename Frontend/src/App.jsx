@@ -38,6 +38,7 @@ import PuzzleGame from "./components/pages/Games/Puzzle/Game";
 import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
 import AboutUs from "./components/pages/AboutUs";
 import SignUp from "./components/sign-up";
+import ScrollToTop from "./components/Scrolltotop";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -102,6 +103,7 @@ const App = () => {
           
         </Routes>
         </main>
+        <ScrollToTop/>
         <Footer />
         <Analytics />
       </main>

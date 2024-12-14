@@ -1,5 +1,5 @@
 import React from "react";
-import { RiBookLine, RiGamepadLine, } from "react-icons/ri";
+import { RiBookLine, RiGamepadLine } from "react-icons/ri";
 import { CiMobile3 } from "react-icons/ci";
 import { LiaBalanceScaleRightSolid } from "react-icons/lia";
 import { BiSupport } from "react-icons/bi";
@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const ServicesData = [
   {
     id: 1,
-    title: " Constitution Pdfs",
+    title: "Constitution Pdfs",
     link: "/constitution",
     icon: <RiBookLine />,
     tooltip: "Dive into the Indian Constitution with ease.",
@@ -77,10 +77,10 @@ const SlideLeft = (delay) => {
 
 const Services = () => {
   return (
-    <section className="bg-white">
+    <section className="text-black bg-white dark:bg-gray-800 dark:text-white">
       <div className="container pt-16 pb-14">
-        <h1 className="pb-10 text-4xl font-bold text-left text-gray-800">
-        Discover the Path to Knowledge
+        <h1 className="pb-10 text-4xl font-bold text-left text-gray-800 dark:text-white">
+          Discover the Path to Knowledge
         </h1>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6">
           {ServicesData.map((service) => (
@@ -90,15 +90,18 @@ const Services = () => {
               initial="initial"
               whileInView={"animate"}
               viewport={{ once: true }}
-              className="relative bg-[#f4f4f4] rounded-2xl flex flex-col gap-4 items-center justify-center p-4 py-7 hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl"
+              className="relative flex flex-col items-center justify-center gap-4 p-4 duration-300 bg-gray-100 shadow-sm rounded-2xl py-7 group dark:bg-gray-700 hover:bg-gray-200 hover:dark:bg-gray-600 hover:scale-110 hover:shadow-xl"
             >
-              <a href={service.link} className="flex flex-col items-center w-full text-yellow-500 text-cente hover:text-yellow-600">
-                <div className="mb-4 text-4xl text-center " > {service.icon}</div>
-                <h1 className="px-3 text-lg font-semibold text-center ">
+              <a
+                href={service.link}
+                className="flex flex-col items-center w-full text-center text-yellow-500 hover:text-yellow-400"
+              >
+                <div className="mb-4 text-4xl text-center">{service.icon}</div>
+                <h1 className="px-3 text-lg font-semibold text-center">
                   {service.title}
                 </h1>
               </a>
-              <div className="absolute hidden px-4 py-2 text-sm text-white bg-gray-800 rounded bottom-[-2.5rem] group-hover:block">
+              <div className="absolute hidden px-4 py-2 text-sm text-white bg-gray-800 rounded dark:bg-gray-900 bottom-[-2.5rem] group-hover:block">
                 {service.tooltip}
               </div>
             </motion.div>

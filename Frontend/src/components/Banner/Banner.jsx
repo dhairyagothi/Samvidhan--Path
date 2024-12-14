@@ -37,14 +37,14 @@ const Banner = () => {
     {
       id: 5,
       title: "Schedules",
-      icon: <MdSchedule  className="text-2xl" />,
+      icon: <MdSchedule className="text-2xl" />,
       link: "/citizen/schedules", // Replace with actual route
     },
   ];
 
   return (
     <section>
-      <div className="grid grid-cols-1 gap-8 space-y-6 text-black bg-white py-14 md:py-24 md:grid-cols-2 md:space-y-0 dark:bg-gray-800 dark:text-white">
+      <div className="grid grid-cols-1 gap-8 py-14 md:py-24 md:grid-cols-2 dark:bg-gray-800">
         {/* Banner Image */}
         <div className="flex items-center justify-center">
           <motion.img
@@ -54,7 +54,7 @@ const Banner = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             src={BannerPng}
             alt="Constitution Illustration"
-            className="w-[350px] md:max-w-[450px] object-cover drop-shadow-lg shadow-2xl"
+            className="w-[350px] md:max-w-[450px] object-cover drop-shadow-lg hover:scale-105 duration-300 dark:drop-shadow-xl"
           />
         </div>
         {/* Banner Text */}
@@ -65,7 +65,7 @@ const Banner = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold text-gray-800 !leading-snug "
+              className="text-3xl font-bold leading-snug text-gray-800 md:text-4xl dark:text-gray-200"
             >
               Your Gateway to Rights, Duties, and the Constitution's Core!
             </motion.h1>
@@ -78,10 +78,12 @@ const Banner = () => {
                   initial="initial"
                   whileInView={"animate"}
                   viewport={{ once: true }}
-                  className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-yellow-500 hover:text-white duration-300 hover:shadow-2xl cursor-pointer"
+                  className="flex items-center gap-4 p-6 duration-300 bg-gray-100 shadow-sm dark:bg-gray-700 rounded-2xl hover:bg-yellow-500 dark:hover:bg-yellow-400 hover:text-white dark:hover:text-gray-800 dark:shadow-md hover:shadow-lg"
                 >
                   {section.icon}
-                  <p className="text-lg">{section.title}</p>
+                  <p className="text-lg text-gray-800 dark:text-gray-200">
+                    {section.title}
+                  </p>
                 </motion.a>
               ))}
             </div>

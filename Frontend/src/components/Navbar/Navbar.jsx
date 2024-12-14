@@ -95,7 +95,7 @@ const Navbar = () => {
       <div className="text-black shadow-lg bg-yellow-50 dark:bg-gray-800 dark:text-white">
         <div className="container flex items-center justify-between px-2 text-black bg-white lg:px-5 dark:bg-gray-800 dark:text-white">
           {/* Accessibility Icons */}
-          <div className="flex items-center space-x-4 text-black text-gray-700 bg-white dark:bg-gray-800 dark:text-white" >
+          <div className="flex items-center space-x-4 text-gray-700 bg-white dark:bg-gray-800 dark:text-white" >
             <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
             <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
             <FaTextHeight
@@ -172,7 +172,7 @@ const Navbar = () => {
               >
                 <button
                   onClick={() => handleMenuClick(menu.path)}
-                  className="relative inline-block px-3 py-2 hover:text-secondary"
+                  className="relative inline-block px-3 py-2 dark:hover:bg-gray-800 hover:text-secondary"
                 >
                   {menu.title}
                 </button>
@@ -196,7 +196,7 @@ const Navbar = () => {
                         >
                           <button
                             onClick={() => handleMenuClick(sub.path)}
-                            className="block w-full px-4 py-2 text-left hover:bg-gray-100 hover:text-secondary"
+                            className="block w-full px-4 py-2 text-left dark:hover:bg-gray-800 hover:bg-gray-100 hover:text-secondary"
                           >
                             {sub.title}
                           </button>
@@ -216,7 +216,7 @@ const Navbar = () => {
   <motion.div
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
-    className="fixed z-[1000] cursor-pointer lg:hidden top-16 right-6"
+    className="sticky z-[1000] cursor-pointer lg:hidden top-16 right-6"
     onClick={toggleMenu}
   >
     {isOpen ? (
@@ -231,9 +231,9 @@ const Navbar = () => {
     initial={{ x: "100%" }}
     animate={{ x: isOpen ? "0%" : "100%" }}
     transition={{ duration: 0.5, ease: "easeInOut" }}
-    className="fixed top-0 right-0 z-50 flex flex-col w-4/5 h-screen gap-6 px-6 py-8 text-white bg-gray-900 shadow-lg"
+    className="fixed top-0 right-0 z-50 flex flex-col w-4/5 h-screen gap-6 px-6 py-8 text-white bg-gray-900 shadow-lg "
   >
-    <ul className="flex flex-col gap-4 mt-10">
+    <ul className="flex flex-col gap-4 mt-44 ">
       {NavbarMenu.map((menu) => (
         <li
           key={menu.id}
@@ -267,7 +267,7 @@ const Navbar = () => {
                   >
                     <button
                       onClick={() => handleMenuClick(sub.path)}
-                      className="block w-full px-4 py-2 text-left md:hover:bg-gray-100 hover:text-secondary"
+                      className="block w-full px-4 py-2 text-left dark:hover:bg-gray-800 md:hover:bg-gray-100 hover:text-secondary"
                     >
                       {sub.title}
                     </button>

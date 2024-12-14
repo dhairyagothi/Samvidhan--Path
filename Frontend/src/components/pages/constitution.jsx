@@ -45,11 +45,11 @@ const SlideUp = (delay) => {
 
 const Constitution = () => {
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-100 dark:bg-gray-800 ">
       {/* Hero Section */}
       <div className="px-8 py-16 text-white bg-gradient-to-r from-blue-300 to-sky-700">
-        <div className="container mx-auto text-center">
-          <h1 className="mb-6 text-4xl font-bold">
+        <div className="container mx-auto text-center ">
+          <h1 className="mb-6 text-4xl font-bold ">
             Explore the Constitution of India
           </h1>
           <p className="max-w-3xl mx-auto text-lg leading-relaxed">
@@ -58,40 +58,41 @@ const Constitution = () => {
           </p>
         </div>
       </div>
-      <div className="mt-8">
+      <div className=" dark:bg-gray-800 dark:text-white">
             <img
               src={constitutionnpng}
               alt="Constitutional Values"
-              className="mx-auto rounded-lg shadow-2xl h-96"
+              className="mx-auto mt-8 rounded-lg shadow-2xl h-96"
             />
           </div>
       {/* Main Sections */}
-      <div className="container py-16">
+      <div className="container py-16 dark:bg-gray-800 dark:text-white">
         <h2 className="mb-12 text-3xl font-bold text-center">
           Key Sections of the Constitution
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {sections.map((section) => (
-            <motion.div
-              key={section.id}
-              variants={SlideUp(section.delay)}
-              initial="initial"
-              whileInView={"animate"}
-              viewport={{ once: true }}
-              className="flex flex-col items-center p-8 text-center duration-300 bg-white shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl"
-            >
-              <div className="mb-4 text-5xl text-sky-500">{section.icon}</div>
-              <h3 className="mb-4 text-xl font-semibold">{section.title}</h3>
-              <p className="text-gray-600">{section.description}</p>
-              <a
-                href={section.link}
-                className="flex items-center gap-2 mt-6 font-semibold hover:underline text-sky-600 hover:text-sky-700 hover: animate-bounce"  
-              >
-                Learn More <AiOutlineArrowRight className="ml-2" />
-              </a>
-            </motion.div>
-          ))}
-        </div>
+  {sections.map((section) => (
+    <motion.div
+      key={section.id}
+      variants={SlideUp(section.delay)}
+      initial="initial"
+      whileInView={"animate"}
+      viewport={{ once: true }}
+      className="flex flex-col items-center p-8 text-center duration-300 bg-white shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:text-white dark:shadow-gray-700"
+    >
+      <div className="mb-4 text-5xl text-sky-500">{section.icon}</div>
+      <h3 className="mb-4 text-xl font-semibold">{section.title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{section.description}</p>
+      <a
+        href={section.link}
+        className="flex items-center gap-2 mt-6 font-semibold text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-500 hover:underline animate-bounce"
+      >
+        Learn More <AiOutlineArrowRight className="ml-2" />
+      </a>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );
