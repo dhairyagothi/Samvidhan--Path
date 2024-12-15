@@ -228,13 +228,13 @@ const data = useMemo(
   
   return (
     <>
-    <div className="container flex flex-row gap-4 mx-auto mt-6">
+    <div className="container flex flex-row gap-4 mx-auto mt-6 text-black dark:mt-0 dark:bg-gray-800 dark:text-white">
     <span
           onClick={Homeclick}
           className=""
         ><h4 className="text-red-500 cursor-pointer">Home</h4></span><span> &gt; </span> <h4>Constitution</h4>
      </div>   
-    <div className="container pb-40 mx-auto mt-5 mb-6">
+    <div className="container pb-40 mx-auto mt-5 mb-6 dark:mb-0 dark:bg-gray-800 dark:text-white">
     
       <h1 className="mb-4 text-2xl font-bold">Constitution of India / भारत का संविधान</h1>
 
@@ -244,7 +244,7 @@ const data = useMemo(
       {/* Table */}
       <table
         {...getTableProps()}
-        className="w-full mt-4 border border-collapse border-gray-200 table-auto"
+        className="w-full mt-4 text-black border border-collapse border-gray-200 table-auto dark:bg-gray-800 dark:text-white"
       >
         <thead className="text-white bg-yellow-500">
           {headerGroups.map((headerGroup) => (
@@ -264,7 +264,7 @@ const data = useMemo(
           {page.map((row) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} className="hover:bg-gray-100">
+              <tr {...row.getRowProps()} className="hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800">
                 {row.cells.map((cell) => (
                   <td
                     {...cell.getCellProps()}
@@ -280,7 +280,7 @@ const data = useMemo(
       </table>
 
       {/* Pagination Controls */}
-      <div className="flex items-center justify-between mt-4">
+      <div className="flex items-center justify-between mt-4 text-black dark:bg-gray-800 dark:text-white">
         <button
           onClick={() => previousPage()}
           disabled={!canPreviousPage}

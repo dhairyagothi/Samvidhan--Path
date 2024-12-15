@@ -122,7 +122,7 @@ const Timeline = () => {
   }
   return (
     <>
-    <div className="px-6 py-12 bg-gray-100">
+    <div className="px-6 py-12 text-black bg-gray-100 dark:bg-gray-800 dark:text-white">
       <div className="container flex flex-row gap-4 mx-auto mt-6">
     <span
           onClick={Homeclick}

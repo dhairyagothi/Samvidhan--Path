@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
@@ -36,6 +37,7 @@ import QuizComponent from "./components/pages/Quiz/QuizComponent";
 import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
 import PuzzleGame from "./components/pages/Games/Puzzle/Game";
 import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
+import CrosswordGame from "./components/pages/Games/CrossWord/CrossWord";
 import AboutUs from "./components/pages/AboutUs";
 import SignUp from "./components/sign-up";
 import ScrollToTop from "./components/Scrolltotop";
@@ -97,6 +99,7 @@ const App = () => {
           <Route path="/translate" element={<GoogleTranslate />} />
           <Route path="/quiz" element={<QuizComponent />} />
           <Route path="/games/word-search" element={<WordSearch />} />
+          <Route path="/games/crossword" element={<CrosswordGame />} />
           <Route path="/games/puzzle" element={<PuzzleIntro />} />
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
           <Route path="/sign-up" element={<SignUp />} />
@@ -106,6 +109,7 @@ const App = () => {
         <ScrollToTop/>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </main>
     </Router>
   );

@@ -9,229 +9,103 @@ const WordSearchGame = () => {
     "RIGHTS",
     "DUTY",
     "CONSTITUTION",
-    "PLEDGE",
-    "UNITY",
-    "SOVEREIGN",
-    "REPUBLIC",
-    "INDIA",
-    "PEOPLE",
   ];
 
+  const [grid, setGrid] = useState([]);
   const [wordsToFind, setWordsToFind] = useState([]);
   const [foundWords, setFoundWords] = useState([]);
-  const [selectedCells, setSelectedCells] = useState([]);
-  const [currentWord, setCurrentWord] = useState("");
-  const [showPopup, setShowPopup] = useState(false);
-  const [grid, setGrid] = useState([]);
+  const [selectedWord, setSelectedWord] = useState("");
 
   useEffect(() => {
-    const shuffledWords = wordBank.sort(() => 0.5 - Math.random());
-    setWordsToFind(shuffledWords.slice(0, 7)); // Select 7 random words for the game
-    resetGame(shuffledWords.slice(0, 7));
+    const selectedWords = wordBank.sort(() => 0.5 - Math.random()).slice(0, 5);
+    setWordsToFind(selectedWords);
+    setGrid(generateGrid(10, 10, selectedWords));
   }, []);
-
-  const resetGame = (selectedWords) => {
-    const newGrid = generateGrid(10, 10, selectedWords);
-    setGrid(newGrid);
-    setFoundWords([]);
-    setSelectedCells([]);
-    setCurrentWord("");
-    setShowPopup(false);
-  };
 
   const generateGrid = (rows, cols, words) => {
     const grid = Array(rows)
       .fill(null)
-      .map(() => Array(cols).fill("")); // Initialize empty grid
+      .map(() => Array(cols).fill(""));
+    const directions = [
+      [0, 1], // Horizontal
+      [1, 0], // Vertical
+    ];
 
-    const placeWordInGrid = (word) => {
+    const placeWord = (word) => {
       let placed = false;
-
       while (!placed) {
-        const direction = Math.random() > 0.5 ? "HORIZONTAL" : "VERTICAL";
-        const startRow = Math.floor(Math.random() * rows);
-        const startCol = Math.floor(Math.random() * cols);
+        const [dx, dy] = directions[Math.floor(Math.random() * directions.length)];
+        const x = Math.floor(Math.random() * rows);
+        const y = Math.floor(Math.random() * cols);
 
-        if (direction === "HORIZONTAL") {
-          if (startCol + word.length <= cols) {
-            // Check if space is available
-            const canPlace = word.split("").every((_, i) => {
-              return grid[startRow][startCol + i] === "" || grid[startRow][startCol + i] === word[i];
+        if (x + dx * word.length <= rows && y + dy * word.length <= cols) {
+          const canPlace = word.split("").every((char, i) => {
+            const nx = x + dx * i;
+            const ny = y + dy * i;
+            return !grid[nx][ny] || grid[nx][ny] === char;
+          });
+
+          if (canPlace) {
+            word.split("").forEach((char, i) => {
+              const nx = x + dx * i;
+              const ny = y + dy * i;
+              grid[nx][ny] = char;
             });
-
-            if (canPlace) {
-              word.split("").forEach((char, i) => {
-                grid[startRow][startCol + i] = char;
-              });
-              placed = true;
-            }
-          }
-        } else {
-          if (startRow + word.length <= rows) {
-            // Check if space is available
-            const canPlace = word.split("").every((_, i) => {
-              return grid[startRow + i][startCol] === "" || grid[startRow + i][startCol] === word[i];
-            });
-
-            if (canPlace) {
-              word.split("").forEach((char, i) => {
-                grid[startRow + i][startCol] = char;
-              });
-              placed = true;
-            }
+            placed = true;
           }
         }
       }
     };
 
-    // Place all words
-    words.forEach((word) => {
-      placeWordInGrid(word);
-    });
+    words.forEach(placeWord);
 
-    // Fill remaining empty cells with random letters
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        if (grid[i][j] === "") {
-          grid[i][j] = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-        }
-      }
-    }
-
-    return grid;
+    // Fill remaining cells
+    return grid.map((row) =>
+      row.map((cell) => (cell ? cell : String.fromCharCode(65 + Math.random() * 26)))
+    );
   };
 
   const handleCellClick = (row, col) => {
-    const letter = grid[row][col];
-
-    if (!letter) return; // Skip empty cells
-    if (selectedCells.some((cell) => cell.row === row && cell.col === col))
-      return; // Avoid re-selecting cells
-
-    setSelectedCells((prev) => [...prev, { row, col }]);
-    setCurrentWord((prev) => prev + letter);
+    setSelectedWord((prev) => prev + grid[row][col]);
   };
 
-  const checkWord = () => {
-    if (wordsToFind.includes(currentWord) && !foundWords.includes(currentWord)) {
-      // Add to found words
-      setFoundWords((prev) => [...prev, currentWord]);
-
-      // Remove letters from the grid
-      const newGrid = grid.map((row, rowIndex) =>
-        row.map((letter, colIndex) =>
-          selectedCells.some(
-            (cell) => cell.row === rowIndex && cell.col === colIndex
-          )
-            ? ""
-            : letter
-        )
-      );
-      setGrid(newGrid);
-
-      // Check if all words are found
-      if (foundWords.length + 1 === wordsToFind.length) {
-        setShowPopup(true);
-      }
-
-      // Reset selection
-      resetSelection();
-    } else {
-      alert("Invalid word or already found!");
-      resetSelection();
+  const submitWord = () => {
+    if (wordsToFind.includes(selectedWord) && !foundWords.includes(selectedWord)) {
+      setFoundWords((prev) => [...prev, selectedWord]);
     }
-  };
-
-  const resetSelection = () => {
-    setSelectedCells([]);
-    setCurrentWord("");
-  };
-
-  const handlePopupAction = (action) => {
-    if (action === "restart") {
-      resetGame(wordsToFind);
-    } else if (action === "back") {
-      alert("Returning to the main menu...");
-    }
+    setSelectedWord("");
   };
 
   return (
-    <div className="flex flex-col items-center p-6">
-      <h1 className="mb-4 text-2xl font-bold">Samvidhan Path Word Search</h1>
-      <p className="mb-2 text-lg">
-        Words to Find: {foundWords.length}/{wordsToFind.length}
-      </p>
+    <div className="flex flex-col items-center p-4">
+      <h1 className="mb-4 text-xl font-bold">Word Search Game</h1>
       <div className="grid grid-cols-10 gap-1">
         {grid.map((row, rowIndex) =>
-          row.map((letter, colIndex) => (
+          row.map((cell, colIndex) => (
             <div
               key={`${rowIndex}-${colIndex}`}
-              className={`w-12 h-12 flex items-center justify-center border text-lg font-bold ${
-                selectedCells.some(
-                  (cell) => cell.row === rowIndex && cell.col === colIndex
-                )
-                  ? "bg-green-300 text-white"
-                  : letter
-                  ? "bg-yellow-100 text-gray-800"
-                  : "bg-gray-300"
-              } cursor-pointer`}
+              className="flex items-center justify-center w-10 h-10 border cursor-pointer"
               onClick={() => handleCellClick(rowIndex, colIndex)}
             >
-              {letter}
+              {cell}
             </div>
           ))
         )}
       </div>
-      <div className="flex flex-col items-center mt-4">
-        <h2 className="text-lg font-semibold">Selected Word:</h2>
-        <p className="text-xl font-bold text-blue-600">{currentWord}</p>
-        <div className="flex gap-2">
-          <button
-            className="px-4 py-2 mt-2 font-bold text-white bg-green-500 rounded"
-            onClick={checkWord}
-          >
-            Submit Word
-          </button>
-          <button
-            className="px-4 py-2 mt-2 font-bold text-white bg-red-500 rounded"
-            onClick={resetSelection}
-          >
-            Reset Selection
-          </button>
-        </div>
+      <div className="mt-4">
+        <p>Selected Word: {selectedWord}</p>
+        <button className="px-4 py-2 text-white bg-blue-500" onClick={submitWord}>
+          Submit Word
+        </button>
       </div>
       <div className="mt-4">
-        <h2 className="text-lg font-semibold">Found Words:</h2>
-        <ul className="list-disc list-inside">
+        <h2>Found Words:</h2>
+        <ul>
           {foundWords.map((word, index) => (
-            <li key={index} className="font-bold text-green-600">
-              {word}
-            </li>
+            <li key={index}>{word}</li>
           ))}
         </ul>
       </div>
-      {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="p-6 text-center bg-white rounded shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold">Congratulations!</h2>
-            <p className="mb-4">You've found all the words!</p>
-            <div className="flex gap-4">
-              <button
-                className="px-4 py-2 font-bold text-white bg-green-500 rounded"
-                onClick={() => handlePopupAction("restart")}
-              >
-                Restart Game
-              </button>
-              <button
-                className="px-4 py-2 font-bold text-white bg-blue-500 rounded"
-                onClick={() => window.history.back()}
-              >
-                Go Back
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
