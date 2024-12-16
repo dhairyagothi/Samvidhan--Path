@@ -42,3 +42,6 @@ In **Banarjee v. Union of India (1994)**, the Supreme Court ruled that religious
 
 Article 25 is vital in protecting the **right to religious freedom** in India. It guarantees that individuals can practice their faith without interference, ensuring **religious diversity** and **tolerance** in a pluralistic society. This right is fundamental to India's identity as a secular democracy.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

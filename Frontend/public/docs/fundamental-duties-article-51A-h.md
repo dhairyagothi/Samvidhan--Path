@@ -29,3 +29,7 @@ By fostering a spirit of inquiry, Article 51A(h) encourages individuals to quest
 ---
 
 *This content is inspired by the values enshrined in the Constitution of India and supported by various educational and legal frameworks.*
+
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

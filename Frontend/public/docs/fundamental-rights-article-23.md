@@ -42,3 +42,6 @@ The **Employment of Prisoners Act, 1850** allows for the employment of prisoners
 
 Article 23 plays a critical role in combating exploitation, particularly in the form of forced labor and human trafficking. By prohibiting such practices, the Constitution seeks to promote **human dignity** and ensure that individuals are not treated as mere commodities or forced into servitude.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

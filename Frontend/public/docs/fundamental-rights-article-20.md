@@ -84,3 +84,7 @@ Article 20 is crucial for ensuring **fairness and due process** in the criminal 
 ### **Conclusion**
 
 In conclusion, **Article 20** of the Indian Constitution is a vital safeguard that protects individuals against arbitrary or excessive punishment. It enshrines the principle
+
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

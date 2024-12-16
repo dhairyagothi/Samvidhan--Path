@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import samvidhanPathLogo from "../../assets/samvidhanpath.png";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { MdAccessibility } from "react-icons/md";
 import { FaHighlighter, FaTextHeight } from "react-icons/fa";
 import TextToSpeech from "../TexttoSpeach";
 import GoogleTranslate from "../Language";
@@ -96,7 +95,7 @@ const Navbar = () => {
         <div className="container flex items-center justify-between px-2 text-black bg-white lg:px-5 dark:bg-gray-800 dark:text-white">
           {/* Accessibility Icons */}
           <div className="flex items-center space-x-4 text-gray-700 bg-white dark:bg-gray-800 dark:text-white" >
-            <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" />
+            {/* <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" /> */}
             <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
             <FaTextHeight
               size={24}
@@ -108,7 +107,9 @@ const Navbar = () => {
           <ThemeChange/>
           </div>
           {/* Google Translate */}
+          
           <GoogleTranslate />
+          
         </div>
       </div>
 

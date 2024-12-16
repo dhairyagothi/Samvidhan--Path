@@ -64,7 +64,7 @@ const SlideLeft = (delay) => {
 
 const Citizen = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white dark:bg-gray-800 dark:text-white">
       {/* Introductory Section */}
       <div className="px-8 py-16 text-white bg-gradient-to-r from-yellow-500 to-amber-700">
         <div className="container mx-auto text-center">
@@ -98,10 +98,10 @@ const Citizen = () => {
               key={citizen.id}
               href={citizen.link}
               variants={SlideLeft(citizen.delay)}
-              initial="initial"
+              initial="initial" 
               whileInView={"animate"}
               viewport={{ once: true }}
-              className="bg-[#f4f4f4] rounded-2xl flex flex-col gap-4 items-center justify-center p-4 py-7 cursor-pointer hover:bg-white hover:scale-110 duration-300 hover:shadow-2xl"
+              className="bg-[#f4f4f4] rounded-2xl flex flex-col gap-4 items-center justify-center p-4 py-7 cursor-pointer  shadow-lg  hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:text-white dark:shadow-gray-700"
             >
               <div className="mb-4 text-4xl text-yellow-500"> {citizen.icon}</div>
               <h1 className="px-3 text-lg font-semibold text-center ">

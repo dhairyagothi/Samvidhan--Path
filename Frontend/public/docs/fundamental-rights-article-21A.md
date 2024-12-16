@@ -56,3 +56,6 @@ Article 21A holds significant importance as it marks a crucial step towards ensu
 
 This right is pivotal for breaking the cycle of poverty and promoting **social mobility**, as education opens up opportunities for individuals to improve their socio-economic conditions. The implementation of this right is crucial for the overall growth of the nation, as an educated population contributes to the country’s economic and social progress.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

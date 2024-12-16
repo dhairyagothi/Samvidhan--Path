@@ -38,4 +38,4 @@ The judiciary has underscored the importance of cultural preservation as a colle
 
 ---
 
-*This content is inspired by [www.legislative.gov.in](https://www.legislative.gov.in).*
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

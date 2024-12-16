@@ -45,4 +45,4 @@ Although not legally binding, Article 51A(g) has influenced several judicial dec
 
 ---
 
-*This content is adapted from authoritative resources on the Indian Constitution.*
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

@@ -52,3 +52,6 @@ In **Maneka Gandhi v. Union of India (1978)**, the Court ruled that preventive d
 
 Article 22 ensures that the right to liberty is not arbitrarily denied by the state. It provides safeguards for individuals against wrongful arrest and detention, while also balancing the need for preventive action in cases of national security or public order. The protection against unlawful detention strengthens the integrity of the justice system, ensuring that individuals are not deprived of their rights without a fair legal process.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

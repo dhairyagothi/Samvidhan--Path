@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "appwrite": "^16.0.2",
     "axios": "^1.7.8",
     "framer-motion": "^11.3.19",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
     "konva": "^9.3.16",
     "react": "^18.3.1",
     "react-crossword": "^0.2.0",
@@ -27,6 +30,7 @@
     "react-router-dom": "^7.0.1",
     "react-table": "^7.8.0",
     "react-tilt": "^1.0.2",
+    "react-to-pdf": "^1.0.1",
     "survey-react": "^1.12.12",
     "use-image": "^1.1.1"
   },

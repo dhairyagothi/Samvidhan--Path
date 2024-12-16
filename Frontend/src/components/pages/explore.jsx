@@ -36,7 +36,7 @@ const SlideRight = (delay) => {
 
 const Explore = () => {
   return (
-    <section className="min-h-screen bg-gray-50">
+    <section className="min-h-screen bg-gray-50 dark:bg-gray-800 dark:text-white">
       {/* Hero Section */}
       <div className="px-8 py-16 text-white bg-gradient-to-r from-green-500 to-teal-600">
         <div className="container mx-auto text-center">
@@ -58,11 +58,11 @@ const Explore = () => {
               initial="initial"
               whileInView={"animate"}
               viewport={{ once: true }}
-              className="flex flex-col justify-between p-6 duration-300 bg-white shadow-lg rounded-xl hover:shadow-2xl hover:scale-105"
+              className="flex flex-col justify-between p-6 duration-300 bg-white shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:text-white dark:shadow-gray-700"
             >
               <div>
                 <h3 className="mb-4 text-xl font-semibold">{topic.title}</h3>
-                <p className="text-gray-600">{topic.description}</p>
+                <p className="text-gray-600 dark:text-gray-200">{topic.description}</p>
               </div>
               <a
                 href={topic.link}

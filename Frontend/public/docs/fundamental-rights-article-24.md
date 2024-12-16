@@ -32,3 +32,6 @@ In the case of **M.C. Mehta v. State of Tamil Nadu (1996)**, the Supreme Court u
 
 Article 24 is essential for the protection of **child rights** in India. It ensures that children are not exploited for economic gain and are instead provided with opportunities for **education** and **healthy development**. This provision helps in protecting children from work that may impair their physical and mental growth.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

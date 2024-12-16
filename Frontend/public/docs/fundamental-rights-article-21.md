@@ -96,3 +96,6 @@ In conclusion, **Article 21** of the Indian Constitution is a fundamental right 
 
 Article 21 guarantees that **human dignity** and **personal freedom** remain at the forefront of India’s legal and constitutional framework, ensuring that these rights cannot be deprived except by a lawful procedure.
 
+---
+
+*This content is reproduced from [www.legislative.gov.in](https://www.legislative.gov.in). All rights reserved. Special thanks to the legislative department.*

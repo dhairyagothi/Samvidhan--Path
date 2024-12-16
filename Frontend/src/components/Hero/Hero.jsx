@@ -7,6 +7,7 @@ import Banner from "../Banner/Banner";
 import Banner2 from "../Banner/Banner2";
 import Services from "../Services/Services";
 import Subscribe from "../Subscribe/Subscribe";
+import { useNavigate } from "react-router-dom";
 
 export const FadeUp = (delay) => {
   return {
@@ -28,7 +29,17 @@ export const FadeUp = (delay) => {
   };
 };
 
+
+     
 const Hero = () => {
+
+  const navigate = useNavigate();
+
+
+const ServiceClick = () => {
+  navigate("/services");
+}
+
   return (
     <>
       <section className="relative overflow-hidden text-black bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 dark:text-white">
@@ -89,7 +100,7 @@ const Hero = () => {
                 animate="animate"
                 className="flex justify-center md:justify-start"
               >
-                <button className="flex items-center gap-2 primary-btn group">
+                <button className="flex items-center gap-2 primary-btn group" onClick={ServiceClick} >
                   Get Started
                   <IoIosArrowRoundForward className="text-xl duration-300 group-hover:translate-x-2 group-hover:-rotate-45" />
                 </button>
