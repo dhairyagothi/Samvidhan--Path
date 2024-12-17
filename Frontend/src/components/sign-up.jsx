@@ -26,10 +26,14 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Create a sanitized user ID based on the email
+    const sanitizedUserId = formData.email.replace(/[^a-zA-Z0-9_.-]/g, "").toLowerCase();
+
     try {
       // Create user account with Appwrite
       const user = await account.create(
-        "unique()", // USER_ID - Generated dynamically
+        sanitizedUserId, // Use sanitized email as the userId
         formData.email,
         formData.password,
         formData.name
@@ -41,7 +45,7 @@ const SignUp = () => {
       setTimeout(() => {
         setSuccess(false);
         navigate("/signin");
-      }, 3000); // Redirect after 3 seconds
+      }, 5000); // Redirect after 5 seconds
     } catch (err) {
       setError(err.message); // Display error
       console.error(err);
@@ -56,6 +60,7 @@ const SignUp = () => {
           <div className="p-6 bg-white rounded-lg shadow-xl animate-fade-in">
             <h2 className="text-2xl font-semibold text-green-600">Success!</h2>
             <p className="mt-2 text-gray-700">Account created successfully!</p>
+            <p className="mt-2 text-gray-700">Redirecting to sign in page....</p>
           </div>
         </div>
       )}

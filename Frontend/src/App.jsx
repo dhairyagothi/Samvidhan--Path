@@ -36,6 +36,7 @@ import DiscussionForum from "./components/pages/Engage/discussion";
 import QuizComponent from "./components/pages/Quiz/QuizComponent";
 import PuzzleIntro from "./components/pages/Games/Puzzle/Intro";
 import PuzzleGame from "./components/pages/Games/Puzzle/Game";
+import ConstitutionSimplified from "./components/pages/Explore/ConstitutionSimplified";
 import WordSearch from "./components/pages/Games/WordSearch/WordSearch";
 import CrosswordGame from "./components/pages/Games/CrossWord/CrossWord";
 import AboutUs from "./components/pages/AboutUs";
@@ -101,6 +102,7 @@ const App = () => {
           <Route path="/games/word-search" element={<WordSearch />} />
           <Route path="/games/crossword" element={<CrosswordGame />} />
           <Route path="/games/puzzle" element={<PuzzleIntro />} />
+          <Route path="/explore/constitution-simplified" element={<ConstitutionSimplified />} />
           <Route path="/games/puzzle/:level" element={<PuzzleGame />} />
           <Route path="/sign-up" element={<SignUp />} />
           

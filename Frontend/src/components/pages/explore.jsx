@@ -21,7 +21,7 @@ const exploreData = [
     id: 3,
     title: "Constitution Simplified",
     description: "Discover how constitution is divided , its importance and how it is structured.",
-    link: "/constitution",
+    link: "/explore/constitution-simplified",
     delay: 0.4,
   },
 

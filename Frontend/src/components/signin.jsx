@@ -24,36 +24,15 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     try {
-      // Attempt to create a session
+      // Use the email and password to create a session (no need for userId)
       const session = await account.createSession(formData.email, formData.password);
-      navigate("/dashboard");
+      console.log("Session created successfully:", session);
+      navigate("/");
     } catch (err) {
-      if (err.message.includes("Rate limit exceeded")) {
-        // Implementing a simple backoff strategy: wait 1 minute before retrying
-        console.log("Rate limit exceeded. Retrying in 1 minute...");
-        setTimeout(async () => {
-          try {
-            const session = await account.createSession(formData.email, formData.password);
-            navigate("/");
-          } catch (err) {
-            if (err.response && err.response.headers) {
-              const resetTimestamp = err.response.headers["X-RateLimit-Reset"];
-              const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds
-              const waitTime = resetTimestamp - currentTime; // Time to wait in seconds
-              
-              console.log(`Rate limit exceeded. Try again in ${waitTime} seconds.`);
-              setTimeout(() => {
-                handleSubmit(); // Retry after waiting
-              }, waitTime * 1000); // Convert seconds to milliseconds
-            }
-            setError("Login error: " + err.message);
-          }
-        }, 60000); // 1 minute delay
-      } else {
-        setError("Login error: " + err.message);
-      }
+      // Handle the error and display it
+      setError("Login error: " + err.message);
     }
   };
 
@@ -102,7 +81,7 @@ const SignIn = () => {
             <p className="text-gray-600 ">
               Don't have an account?{" "}
               <a
-                href="/signup"
+                href="/sign-up"
                 className="font-semibold text-yellow-500 hover:text-yellow-800"
               >
                 Sign Up
