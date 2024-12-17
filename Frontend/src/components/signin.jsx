@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { Client, Account } from "appwrite";
 
 // Appwrite client and account initialization
-const client = new Client().setEndpoint("https://cloud.appwrite.io/v1").setProject("675b364a00240d898950");
+const client = new Client()
+  .setEndpoint("https://cloud.appwrite.io/v1") // Replace with your endpoint if different
+  .setProject("675b364a00240d898950"); // Replace with your Project ID
 const account = new Account(client);
 
 const SignIn = () => {
@@ -24,15 +26,20 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
-      // Use the email and password to create a session (no need for userId)
-      const session = await account.createSession(formData.email, formData.password);
+      // Authenticate user with email and password
+      const session = await account.createSession(
+        formData.email.trim(), // Ensure no trailing spaces
+        formData.password.trim()
+      );
       console.log("Session created successfully:", session);
-      navigate("/");
+
+      // Redirect to dashboard or home page
+      navigate("/dashboard");
     } catch (err) {
-      // Handle the error and display it
-      setError("Login error: " + err.message);
+      console.error("Login error:", err);
+      setError(err.message || "An unexpected error occurred");
     }
   };
 
@@ -44,7 +51,10 @@ const SignIn = () => {
       </div>
 
       <div className="flex justify-center">
-        <form onSubmit={handleSubmit} className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-xl">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-xl"
+        >
           {/* Error message */}
           {error && <p className="text-center text-red-500">{error}</p>}
 

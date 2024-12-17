@@ -15,7 +15,7 @@ const NavbarMenu = [
     path: "/constitution",
     submenu: [
       { id: 1, title: "History", path: "/constitution/history" },
-      { id: 2, title: "Preamble", path: "/constitution/preamble" },
+      { id: 2, title: "Constitution PDFs", path: "/constitution/preamble" },
     ],
   },
   {
