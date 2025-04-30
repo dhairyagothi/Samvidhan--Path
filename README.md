@@ -147,4 +147,29 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ---
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+
+## 👥 Team
+
+<table>
+  <tr>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/142989448?v=4" width="80"/><br><b>Dhairya Gothi</b><br><sub>Project Admin</sub><br><a href="https://www.linkedin.com/in/dhairya-gothi-65945b288/"><img src="https://img.icons8.com/fluency/32/000000/linkedin.png"/></a></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/167749636?v=4" width="80"/><br><b>Rishita</b><br><sub>Co-lead</sub><br><a href="https://www.linkedin.com/in/rishita-mehta-1154352b4/"><img src="https://img.icons8.com/fluency/32/000000/linkedin.png"/></a></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/180189764?v=4" width="80"/><br><b>Riddhi</b><br><sub>Designer</sub><br><a href="https://www.linkedin.com/in/riddhi-mhadgut-3b0a21289/"><img src="https://img.icons8.com/fluency/32/000000/linkedin.png"/></a></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/167011296?v=4" width="80"/><br><b>Shreya</b><br><sub>Researcher</sub><br><a href="https://www.linkedin.com/in/shreya-dubey-544874289/"><img src="https://img.icons8.com/fluency/32/000000/linkedin.png"/></a></td>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/137044290?v=4" width="80"/><br><b>Mrityunjay</b><br><sub>Developer</sub><br><a href="https://www.linkedin.com/in/mrityunjay-singh-51a2b627a/"><img src="https://img.icons8.com/fluency/32/000000/linkedin.png"/></a></td>
+  </tr>
+</table>
+
+If you have questions, suggestions, or feedback, please reach out via email at dhairyag31@gmail.com.
+
+We value open communication and are happy to help!
+
+
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 Feel free to suggest changes or ask questions. Let’s make **Samvidhan Path** better together! 🚀
