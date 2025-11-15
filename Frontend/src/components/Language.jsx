@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 
 const GoogleTranslate = () => {
-  useEffect(() => {
+
+  // Fallback: Load Google Translate Widget
+  const loadGoogleTranslateWidget = () => {
     window.googleTranslateInit = () => {
       if (!window.google?.translate?.TranslateElement) {
         setTimeout(window.googleTranslateInit, 100);
@@ -45,11 +47,16 @@ const GoogleTranslate = () => {
         });
       }
     };
+
     loadGoogleTranslateScript();
 
     if (window.google && window.google.translate) {
       window.googleTranslateInit();
     }
+  };
+
+  useEffect(() => {
+    loadGoogleTranslateWidget();
 
     return () => {
       // Cleanup logic if necessary
@@ -57,28 +64,32 @@ const GoogleTranslate = () => {
   }, []);
 
   return (
-    <div
-      id="google_element"
-      className="pl-20 google-translate-container md:pl-0"
-    >
-      <style jsx>
+    <>
+      <style>
         {`
           .goog-te-combo {
             display: inline-block;
-            background-color: white; /* White background */
+            background-color: white;
             border: 3px solid rgb(247 186 52);
-            border-radius: 0.5rem; /* Slightly more rounded */
-            padding: 0.5rem 1rem; /* Tailwind: p-2 */
-            font-size: 0.9rem; /* Tailwind: text-sm */
-            transition: all 0.3s ease; /* Smooth transition */
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
             outline: none;
-            color: black; /* Black text */
-            font-weight: 500; /* Tailwind: font-medium */
-            box-shadow: 0 4px 6px rgb(247 186 52); /* Slight shadow */
+            color: black;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgb(247 186 52);
+            min-width: 150px;
+            cursor: pointer;
           }
 
           .goog-te-combo:hover {
-            box-shadow: 0 6px 8px rgb(247 186 52); /* Stronger shadow on hover */
+            box-shadow: 0 6px 8px rgb(247 186 52);
+          }
+
+          .goog-te-combo:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
           }
 
           .goog-logo-link {
@@ -97,18 +108,13 @@ const GoogleTranslate = () => {
             color: black;
           }
 
-          #google_translate_element
-            .goog-te-gadget-simple
-            .goog-te-menu-value
-            span:first-child {
+          #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span:first-child {
             display: none;
           }
 
-          #google_translate_element
-            .goog-te-gadget-simple
-            .goog-te-menu-value:before {
-            content: "Translate"; /* Change the default text */
-            color: #c01c1c; /* Red text */
+          #google_translate_element .goog-te-gadget-simple .goog-te-menu-value:before {
+            content: "Translate";
+            color: #c01c1c;
           }
 
           .goog-te-banner-frame {
@@ -118,29 +124,28 @@ const GoogleTranslate = () => {
           .goog-te-menu-frame {
             max-height: 400px !important;
             overflow-y: auto !important;
-            background-color: white; /* White background for dropdown */
-            border: 1px solid #c01c1c; /* Red border */
-            border-radius: 0.5rem; /* Slightly more rounded */
+            background-color: white;
+            border: 1px solid #c01c1c;
+            border-radius: 0.5rem;
           }
 
-          /* Hide the banner frame */
-          .goog-te-banner-frame {
-            display: none !important;
-          }
-
-          /* Customize the iframe */
           .skiptranslate > iframe {
             height: 0 !important;
             border-style: none;
             box-shadow: none;
           }
+          
           body {
             position: relative;
             top: 0 !important;
           }
         `}
       </style>
-    </div>
+      
+      <div className="pl-20 google-translate-container md:pl-0">
+        <div id="google_element"></div>
+      </div>
+    </>
   );
 };
 

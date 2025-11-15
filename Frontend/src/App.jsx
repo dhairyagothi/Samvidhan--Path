@@ -12,7 +12,7 @@ import Banner2 from "./components/Banner/Banner2";
 import Constitution from "./components/pages/constitution";
 import Explore from "./components/pages/explore";
 import Learn from "./components/pages/Learn";
-import Citizen from "./components/pages/citizen";
+import Citizen from "./components/pages/citizen"
 import Contact from "./components/pages/contact";
 import Engage from "./components/pages/engage";
 import Games from "./components/pages/games";

@@ -92,24 +92,24 @@ const Navbar = () => {
     <>
       {/* Accessibility Bar */}
       <div className="text-black shadow-lg bg-yellow-50 dark:bg-gray-800 dark:text-white">
-        <div className="container flex items-center justify-between px-2 text-black bg-white lg:px-5 dark:bg-gray-800 dark:text-white">
+        <div className="container flex items-center justify-between px-2 py-2 text-black bg-white lg:px-5 dark:bg-gray-800 dark:text-white">
           {/* Accessibility Icons */}
           <div className="flex items-center space-x-4 text-gray-700 bg-white dark:bg-gray-800 dark:text-white" >
             {/* <MdAccessibility size={24} className="cursor-pointer hover:text-black" title="Accessibility Options" /> */}
-            <FaHighlighter size={24} className="cursor-pointer hover:text-black" title="Highlight Text" />
+            <FaHighlighter size={24} className="cursor-pointer hover:text-black dark:hover:text-gray-300" title="Highlight Text" />
             <FaTextHeight
               size={24}
-              className="cursor-pointer hover:text-black"
+              className="cursor-pointer hover:text-black dark:hover:text-gray-300"
               title="Text Resize"
               onClick={() => setShowTextResizer(true)} // Show the Text Resizer popup
             />
           <TextToSpeech /> 
           <ThemeChange/>
           </div>
-          {/* Google Translate */}
-          
-          <GoogleTranslate />
-          
+          {/* Language Selector - Google Translate */}
+          <div className="flex items-center">
+            <GoogleTranslate />
+          </div>
         </div>
       </div>
 
